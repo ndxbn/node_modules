@@ -1,7 +1,7 @@
 {
   "name": "ndxbn",
   "description": "ndxbn CLI",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "bin": "cli.js",
   "types": "index.d.ts",
