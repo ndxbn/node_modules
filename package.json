@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "ndxbn-monorepo",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "jest": "^22.4.4",
+    "lerna": "^2.9.0",
+    "prettier": "^1.12.1",
+    "tslint": "^5.10.0"
+  }
+}
