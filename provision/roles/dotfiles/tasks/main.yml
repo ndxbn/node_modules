@@ -1,0 +1,12 @@
+- name: "check ~/dotfiles/ exists"
+  stat:
+    path: "${HOME}/dotfiles"
+  register: dotfiles
+
+- name: "stow dotfiles"
+  shell: |
+    cd ${HOME}/dotfiles
+    stow -R */
+  when:
+    - dotfiles.stat.exists
+    - dotfiles.stat.readable

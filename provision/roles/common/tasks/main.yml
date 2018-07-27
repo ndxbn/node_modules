@@ -1,0 +1,5 @@
+- name: "install development tools"
+  become: true
+  package:
+    name:
+      - build-essential
