@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
 
   # dotfiles
   config.vm.synced_folder "./synced_folder/dotfiles", "/home/ubuntu/dotfiles",
-                          id: "packages",
+                          id: "dotfiles",
                           mount_options: %w(dmode=775 fmode=644)
 
 end
