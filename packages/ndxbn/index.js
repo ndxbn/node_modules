@@ -1,1 +1,1 @@
-export from './main.js';
+// nothing
