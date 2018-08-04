@@ -1,5 +1,5 @@
 {
-  "name": "@ndxbn/jest-preset",
+  "name": "@ndxbn-config/jest-preset",
   "version": "0.0.0-0",
   "description": "",
   "main": "index.js",
