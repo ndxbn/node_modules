@@ -1,5 +1,0 @@
-- name: "install zsh"
-  become: true
-  package:
-    name:
-      - zsh

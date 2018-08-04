@@ -1,50 +1,21 @@
 - name: "Bootstrapping and System Configuration"
   hosts: all
   become: true
-  
-  
+
   # system wide
   roles:
+    - role: user
+      tags:
+        - bootstrapping
+
     - role: geerlingguy.docker
       docker_users:
-        - ubuntu
+        -  "{{ system_user }}"
+        -  "{{ application_user }}"
       docker_compose_version: "1.22.0"
       tags:
-        - install
         - configuration
     
     - role: common
       tags:
-        - install
         - configuration
-    
-    - role: stow
-      tags:
-        - install
-        - configuration
-    
-    - role: zsh
-      tags:
-        - install
-        - configuration
-
-- name: "Ubuntu User; Configuration and Orchestration"
-  hosts: all
-  become: true
-  become_user: ubuntu
-
-  roles:
-    - role: anyenv
-      tags:
-        - install
-        - anyenv
-  
-    - role: zplug
-      tags:
-        - install
-        - zplug
-  
-    - role: dotfiles
-      tags:
-        - configure
-        - dotfiles

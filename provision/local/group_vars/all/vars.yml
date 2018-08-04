@@ -1,0 +1,6 @@
+system_user: vagrant
+# This user is used to bootstrapping and configuration.
+
+application_user: ubuntu
+# This user is used to run application.
+# If the host is development machine, you can use this user for development.

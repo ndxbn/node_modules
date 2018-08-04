@@ -1,4 +1,0 @@
-- name: "install zplug"
-  git:
-    repo: https://github.com/zplug/zplug
-    dest: /home/ubuntu/.zplug

@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
                           mount_options: %w(dmode=775 fmode=664)
   # directory root is `/vagrant`
   config.vm.provision :ansible_local,
-                      playbook: "site.yml",
+                      playbook: "vagrant.yml",
                       inventory_path: "local",
                       limit: "all",
                       galaxy_role_file: "requirements.yml",
@@ -24,12 +24,12 @@ Vagrant.configure("2") do |config|
   # packages
   # some files should have executable permission.
   # e.g. "node_modules/.bin/*" "/vendor/bin/*"
-  config.vm.synced_folder "./packages", "/home/ubuntu/packages",
+  config.vm.synced_folder "./packages", "/home/vagrant/packages",
                           id: "packages",
                           mount_options: %w(dmode=775 fmode=775)
 
   # dotfiles
-  config.vm.synced_folder "./synced_folder/dotfiles", "/home/ubuntu/dotfiles",
+  config.vm.synced_folder "./synced_folder/dotfiles", "/home/vagrant/dotfiles",
                           id: "dotfiles",
                           mount_options: %w(dmode=775 fmode=644)
 
