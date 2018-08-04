@@ -1,3 +1,8 @@
+=begin
+This Vagrantfile builds development box.
+If you want to debug provision scripts, use ./provision/Vagrantfile ; do `cd provision` and `vagrant up`
+=end
+
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.hostname = "ndxbn.local"
@@ -15,7 +20,7 @@ Vagrant.configure("2") do |config|
                           mount_options: %w(dmode=775 fmode=664)
   # directory root is `/vagrant`
   config.vm.provision :ansible_local,
-                      playbook: "vagrant.yml",
+                      playbook: "local.yml",
                       inventory_path: "local",
                       limit: "all",
                       galaxy_role_file: "requirements.yml",

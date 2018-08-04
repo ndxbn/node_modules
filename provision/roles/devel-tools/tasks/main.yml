@@ -1,0 +1,15 @@
+- name: "install development tools"
+  become: true
+  when: ansible_os_family == 'Debian'
+  
+  package:
+    name:
+      - build-essential
+
+- name: "install development tools"
+  become: true
+  when: ansible_os_family == 'RedHat'
+  
+  package:
+    name:
+      - "@Development Tools"
