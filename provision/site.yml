@@ -1,0 +1,56 @@
+- name: "Bootstrapping and System Configuration"
+  hosts: all
+  become: true
+
+  roles:
+    - role: user
+      tags:
+        - bootstrapping
+    
+    - role: geerlingguy.repo-epel
+      tags:
+        - configuration
+      when: ansible_os_family == 'RedHat'
+      # this tasks should be before other configuration roles/tasks
+  
+    - role: geerlingguy.git
+
+    - role: devel-tools
+      tags:
+        - configuration
+
+- name: "Install and Setup Redis Server"
+  hosts: redis
+  become: true
+
+  roles:
+    - role: geerlingguy.redis
+      redis_save: []
+      # always disable
+
+- name: "Install and Setup MySQL Server"
+  hosts: mysql
+  become: true
+
+  roles:
+    - role: geerlingguy.mysql
+      mysql_databases:
+        - "{{ mysql_database }}"
+      mysql_users:
+        - "{{ mysql_user }}"
+      
+      tags:
+        - configuration
+
+- name: "Install and Setup Application Server"
+  hosts: application
+  become: true
+
+  roles:
+    - role: geerlingguy.docker
+      docker_users:
+        - "{{ system_user }}"
+        - "{{ application_user }}"
+      docker_compose_version: "1.22.0"
+      tags:
+        - configuration

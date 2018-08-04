@@ -1,0 +1,13 @@
+# https://github.com/geerlingguy/ansible-role-mysql/blob/master/defaults/main.yml
+
+# Slow query log settings.
+mysql_slow_query_log_enabled: yes
+mysql_slow_query_time: "0.5"
+
+# Memory settings
+mysql_key_buffer_size: "1G"
+mysql_sort_buffer_size: "16M"
+mysql_read_buffer_size: "16M"
+mysql_max_connections: "1024"
+mysql_tmp_table_size: "512M"
+mysql_max_heap_table_size: "128M"

@@ -1,0 +1,26 @@
+system_user: vagrant
+# This user is used to bootstrapping and configuration.
+
+application_user: ubuntu
+# This user is used to run application.
+
+# Hosts URLs
+# If one host per group, It may "cluster" type.
+#
+# - master-slave: master host (string)
+# - cluster: all hosts (array)
+mysql_url: "127.0.0.1:3306"
+redis_url: "127.0.0.1:6379"
+
+# MySQL
+# https://github.com/geerlingguy/ansible-role-mysql/blob/master/defaults/main.yml#L106
+mysql_database:
+  name: development
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  replicate: 1
+mysql_user:
+  name: vagrant
+  host: 127.0.0.1
+  password: secret
+  priv: "*.*:USAGE"

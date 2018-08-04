@@ -1,7 +1,7 @@
 {
-  "name": "ndxbn",
-  "version": "0.0.3",
-  "description": "my CLI",
+  "name": "@ndxbn-config/jest",
+  "version": "0.0.0-0",
+  "description": "My Jest Preset",
   "main": "index.js",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
@@ -13,5 +13,5 @@
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/ndxbn/packages/ndxbn#readme"
+  "homepage": "https://github.com/ndxbn/ndxbn/packages__config/jest#readme"
 }

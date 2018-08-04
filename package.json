@@ -1,14 +1,72 @@
 {
   "private": true,
   "name": "ndxbn-monorepo",
+  "version": "0.0.0",
   "description": "",
+  "main": "",
+  "keywords": [],
+  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/ndxbn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndxbn/ndxbn/issues"
+  },
+  "homepage": "https://github.com/ndxbn/ndxbn#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "run-s test:packages test:functional",
+    "test:packages": "lerna run test",
+    "test:functional": "jest",
+    "start": "vagrant up",
+    "stop": "vagrant halt",
+    "bootstrap": "run-p bootstrap:*",
+    "bootstrap:dotfiles": "ts-node scripts/clone_dotfiles.ts",
+    "bootstrap:packages": "lerna bootstrap"
   },
   "devDependencies": {
-    "jest": "^22.4.4",
-    "lerna": "^2.9.0",
-    "prettier": "^1.12.1",
-    "tslint": "^5.10.0"
+    "@ndxbn-config/jest": "file:packages__config/jest-preset",
+    "@types/config": "0.0.34",
+    "@types/node": "^8.10.21",
+    "@types/shelljs": "^0.8.0",
+    "@types/winston": "^2.3.9",
+    "config": "^2.0.1",
+    "jest": "^23.4.2",
+    "lerna": "^3.0.0-rc.0",
+    "npm-check-updates": "^2.14.2",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.14.0",
+    "shelljs": "^0.8.2",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typescript": "^3.0.1",
+    "winston": "^3.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "packages__*/*"
+  ],
+  "jest": {
+    "preset": "@ndxbn-config/jest",
+    "rootDir": "",
+    "roots": [
+      "<rootDir>/packages/",
+      "<rootDir>/src/"
+    ]
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "*.ts"
+        ],
+        "options": {
+          "useTabs": true
+        }
+      }
+    ]
   }
 }
