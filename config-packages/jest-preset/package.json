@@ -1,7 +1,7 @@
 {
   "name": "@ndxbn-config/jest",
   "version": "0.0.0-0",
-  "description": "",
+  "description": "My Jest Preset",
   "main": "index.js",
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT"
