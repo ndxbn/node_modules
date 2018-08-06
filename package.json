@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "@ndxbn-config/jest": "file:packages__config/jest",
+    "@ndxbn-config/typescript": "file:packages__config/typescript",
+    "@ndxbn-config/tslint": "file:packages__config/tslint",
     "@types/config": "0.0.34",
     "@types/node": "^8.10.21",
     "@types/shelljs": "^0.8.0",
@@ -53,7 +55,6 @@
     "preset": "@ndxbn-config/jest",
     "rootDir": "",
     "roots": [
-      "<rootDir>/packages/",
       "<rootDir>/src/"
     ]
   },
