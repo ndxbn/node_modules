@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "@ndxbn-config/typescript",
+  "name": "@ndxbn/preset-tslint",
   "version": "0.0.1-3",
-  "description": "My TypeScript compiler Preset",
+  "description": "My TSLint Preset",
   "main": "index.js",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
@@ -14,6 +14,6 @@
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/ndxbn/packages__config/typescript#readme",
-  "gitHead": "f94f82eb209a236c9c41099212d09edc49ff8445"
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/preset-tslint#readme",
+  "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875"
 }
