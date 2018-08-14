@@ -1,6 +1,6 @@
 {
   "name": "nxn",
-  "version": "0.0.2-4",
+  "version": "0.0.2-5",
   "description": "My CLI Tools Shorthand",
   "main": "index.js",
   "keywords": [],
