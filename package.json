@@ -26,9 +26,9 @@
     "bootstrap:packages": "lerna bootstrap"
   },
   "devDependencies": {
-    "@ndxbn/preset-jest": "file:packages__ndxbn/preset-jest",
-    "@ndxbn/preset-tslint": "file:packages__ndxbn/preset-tslint",
-    "@ndxbn/preset-typescript": "file:packages__ndxbn/preset-typescript",
+    "@ndxbn/preset-jest": "file:packages__scoped/preset-jest",
+    "@ndxbn/preset-tslint": "file:packages__scoped/preset-tslint",
+    "@ndxbn/preset-typescript": "file:packages__scoped/preset-typescript",
     "@types/config": "0.0.34",
     "@types/jest": "^23.3.1",
     "@types/node": "^8.10.21",

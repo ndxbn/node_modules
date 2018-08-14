@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "@ndxbn/preset-jest",
-  "version": "0.0.1-3",
-  "description": "My Jest Preset",
+  "name": "@ndxbn/create",
+  "version": "0.0.2-4",
+  "description": "Create Node Module Package",
   "main": "index.js",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
@@ -14,6 +14,6 @@
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/ndxbn/packages/preset-jest#readme",
+  "homepage": "https://github.com/ndxbn/ndxbn/packages__scoped/create#readme",
   "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875"
 }
