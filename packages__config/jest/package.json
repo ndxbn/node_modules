@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@ndxbn-config/jest",
-  "version": "0.0.0-0",
+  "version": "0.0.0",
   "description": "My Jest Preset",
   "main": "index.js",
   "keywords": [],
