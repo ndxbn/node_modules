@@ -1,6 +1,6 @@
 {
   "name": "ndxbn",
-  "version": "0.0.5-2",
+  "version": "0.0.5-3",
   "description": "My CLI",
   "main": "index.js",
   "keywords": [],
@@ -14,5 +14,5 @@
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "homepage": "https://github.com/ndxbn/ndxbn/packages/ndxbn#readme",
-  "gitHead": "c96a609a041adfa2c646f4f200c6cf487374b5df"
+  "gitHead": "f94f82eb209a236c9c41099212d09edc49ff8445"
 }

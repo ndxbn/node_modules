@@ -1,6 +1,6 @@
 {
   "name": "nxn",
-  "version": "0.0.2-2",
+  "version": "0.0.2-3",
   "description": "My CLI Tools Shorthand",
   "main": "index.js",
   "keywords": [],
@@ -14,5 +14,5 @@
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "homepage": "https://github.com/ndxbn/ndxbn/packages/nxn#readme",
-  "gitHead": "c96a609a041adfa2c646f4f200c6cf487374b5df"
+  "gitHead": "f94f82eb209a236c9c41099212d09edc49ff8445"
 }
