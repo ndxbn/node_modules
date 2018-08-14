@@ -1,5 +1,3 @@
-- import_playbook: site.yml
-
 # You SHOULD NOT implements vagrant specific tasks as roles.
 # Because, if they are roles, they are be able to execute from site.yml, and it seems risk.
 - name: "Vagrant Specific Tasks"
