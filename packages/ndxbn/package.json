@@ -1,7 +1,7 @@
 {
   "name": "ndxbn",
   "version": "0.0.3",
-  "description": "my CLI",
+  "description": "My CLI",
   "main": "index.js",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
