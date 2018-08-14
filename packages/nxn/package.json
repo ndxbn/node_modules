@@ -1,0 +1,17 @@
+{
+  "name": "nxn",
+  "version": "0.0.0",
+  "description": "My CLI Tools Shorthand",
+  "main": "index.js",
+  "keywords": [],
+  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/ndxbn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndxbn/ndxbn/issues"
+  },
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/nxn#readme"
+}
