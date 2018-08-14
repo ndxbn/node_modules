@@ -1,7 +1,7 @@
 {
-  "name": "ndxbn",
-  "version": "0.0.5-5",
-  "description": "My CLI",
+  "name": "nxn",
+  "version": "0.0.2-5",
+  "description": "My CLI Tools Shorthand",
   "main": "index.js",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
@@ -13,6 +13,6 @@
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/ndxbn/packages/ndxbn#readme",
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/nxn#readme",
   "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875"
 }
