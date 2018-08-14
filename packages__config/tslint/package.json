@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@ndxbn-config/tslint",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "description": "My TSLint Preset",
   "main": "index.js",
   "keywords": [],
@@ -14,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/ndxbn/packages__config/tslint#readme"
+  "homepage": "https://github.com/ndxbn/ndxbn/packages__config/tslint#readme",
+  "gitHead": "d931fcd15a036c78106a687d5c7877770d63399c"
 }
