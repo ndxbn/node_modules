@@ -1,6 +1,6 @@
 {
   "name": "@ndxbn/create",
-  "version": "0.0.2-0",
+  "version": "0.0.2-1",
   "description": "Create Node Module Package",
   "main": "index.js",
   "keywords": [],

@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@ndxbn-config/typescript",
-  "version": "0.0.1-0",
+  "version": "0.0.1-1",
   "description": "My TypeScript compiler Preset",
   "main": "index.js",
   "keywords": [],
