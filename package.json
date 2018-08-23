@@ -48,10 +48,6 @@
     "typescript": "^3.0.1",
     "winston": "^3.0.0"
   },
-  "workspaces": [
-    "packages/*",
-    "packages__*/*"
-  ],
   "jest": {
     "preset": "@ndxbn-config/jest",
     "rootDir": "",
