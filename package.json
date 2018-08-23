@@ -52,19 +52,7 @@
     "preset": "@ndxbn-config/jest",
     "rootDir": "",
     "roots": [
-      "<rootDir>/src/"
-    ]
-  },
-  "prettier": {
-    "overrides": [
-      {
-        "files": [
-          "*.ts"
-        ],
-        "options": {
-          "useTabs": true
-        }
-      }
+      "<rootDir>/tests/"
     ]
   }
 }
