@@ -3,7 +3,7 @@
   "name": "@ndxbn/preset-tslint",
   "version": "0.0.1-5",
   "description": "My TSLint Preset",
-  "main": "index.js",
+  "main": "tslint.json",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT",

@@ -3,7 +3,7 @@
   "name": "@ndxbn/preset-typescript",
   "version": "0.0.1-5",
   "description": "My TypeScript compiler Preset",
-  "main": "index.js",
+  "main": "tsconfig.json",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT",
