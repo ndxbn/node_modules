@@ -22,5 +22,11 @@
     "/node_modules/",
     "index.js",
     "index.ts"
-  ]
+  ],
+  "testEnvironment": "node",
+  "globals": {
+    "ts-jest": {
+      "skipBabel": true
+    }
+  }
 }
