@@ -21,7 +21,13 @@
     "test:functional": "jest",
     "bootstrap": "run-p bootstrap:*",
     "bootstrap:dotfiles": "ts-node scripts/clone_dotfiles.ts",
-    "bootstrap:packages": "lerna bootstrap"
+    "bootstrap:packages": "lerna bootstrap",
+    "fmt": "run-s format",
+    "format": "run-p format:*",
+    "format:scripts": "npx prettier --write \"scripts/**/*\"",
+    "format:tests": "npx prettier --write \"tests/**/*\"",
+    "format:config": "npx prettier --write \"config/*\"",
+    "format:md": "npx prettier --write \"**/*.md\""
   },
   "devDependencies": {
     "@ndxbn/preset-jest": "file:packages__scoped/preset-jest",
