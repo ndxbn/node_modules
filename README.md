@@ -5,19 +5,11 @@ If library module gets big, I move it into new its repository.
 
 ## Requirements
 
-for develop node nodules
-
-- Node.js LTS or later
-
-for develop php library
- 
-- PHP latest
-
-for develop infrastructure provisioning
-
-- Python 3 or later
 - Vagrant
 - Oracle Virtual Box
+- Node.js LTS or later
+- Python 3 or later（for develop provision）
+- PHP latest（for develop PHP library）
 
 ## Bootstrap
 
