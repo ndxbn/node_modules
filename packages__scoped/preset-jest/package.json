@@ -3,7 +3,7 @@
   "name": "@ndxbn/preset-jest",
   "version": "0.0.1-5",
   "description": "My Jest Preset",
-  "main": "index.js",
+  "main": "jest-preset.json",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT",
