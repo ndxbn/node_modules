@@ -8,7 +8,7 @@ If you have some questions for me, you can use [ISSUE](https://github.com/ndxbn/
 Of course, you can [reply or send DM on Twitter](https://twitter.com/ndxbn), too.
 
 @ndxbn に質問とかがしたければ、[ISSUE](https://github.com/ndxbn/ndxbn/issues/new?template=question.md) を使ってください。
-当然、[Twitter でリプとか DM を送りつける](https://twitter.com/ndxbn)のでも良いです。
+もちろん、[Twitter でリプとか DM を送りつけても](https://twitter.com/ndxbn)良いです。
 
 ## Requirements
 
