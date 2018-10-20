@@ -25,8 +25,11 @@
 
   roles:
     - role: geerlingguy.redis
+      # rdb backup should be disabled
       redis_save: []
-      # always disable
+      redis_bind_interface: 0.0.0.0
+      tags:
+        - configuration
 
 - name: "Install and Setup MySQL Server"
   hosts: mysql
