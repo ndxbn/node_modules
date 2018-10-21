@@ -1,0 +1,4 @@
+- name: "Install anyenv"
+  git:
+    repo: https://github.com/ndxbn/anyenv.git
+    dest: "/home/{{ system_user_name }}/.anyenv"

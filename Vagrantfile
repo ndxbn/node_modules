@@ -22,9 +22,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :ansible_local,
                       playbook: "local.yml",
                       inventory_path: "local",
-                      limit: "all",
-                      galaxy_role_file: "requirements.yml",
-                      galaxy_roles_path: "galaxy_roles"
+                      limit: "all"
   config.vm.provision :ansible_local,
                       playbook: "site.yml",
                       inventory_path: "local",
@@ -35,7 +33,7 @@ Vagrant.configure("2") do |config|
   # repository
   # some files should have executable permission.
   # e.g. "node_modules/.bin/*" "/vendor/bin/*"
-  config.vm.synced_folder ".", "/home/vagrant/synced_folder",
+  config.vm.synced_folder "C:/Users/ndxbn/Documents/repos", "/home/vagrant/repos",
                           id: "repository_root",
                           mount_options: %w(dmode=775 fmode=775)
 

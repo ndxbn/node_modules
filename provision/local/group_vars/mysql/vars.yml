@@ -2,7 +2,7 @@
 
 # Slow query log settings.
 mysql_slow_query_log_enabled: yes
-mysql_slow_query_time: "0.5"
+mysql_slow_query_time: "0.1"
 
 # Memory settings
 mysql_key_buffer_size: "1G"
