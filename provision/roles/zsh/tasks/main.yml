@@ -1,0 +1,11 @@
+- name: "Install zsh"
+  become: yes
+  package:
+    name:
+      - zsh
+
+- name: "Git clone zplug"
+  git:
+    repo: https://github.com/zplug/zplug.git
+    dest: "/home/{{ user_name }}/.zplug"
+# you should `chown {{ user_name }}:{{ group_name }}`
