@@ -6,6 +6,6 @@
 
 - name: "Git clone zplug"
   git:
-    repo: https://github.com/zplug/zplug.git
+    repo: https://github.com/39e/zplug.git
     dest: "/home/{{ user_name }}/.zplug"
 # you should `chown {{ user_name }}:{{ group_name }}`
