@@ -1,11 +1,11 @@
 - name: "Check ~/dotfiles/ exists"
   stat:
-    path: "/home/{{ system_user }}/dotfiles"
+    path: "/home/{{ system_user_name }}/dotfiles"
   register: dotfiles_directory
 
 - name: "Stow dotfiles"
   shell: |
-    cd /home/{{ system_user }}/dotfiles
+    cd /home/{{ system_user_name }}/dotfiles
     stow -R */
   when:
     - dotfiles_directory.stat.exists
