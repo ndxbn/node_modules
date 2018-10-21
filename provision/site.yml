@@ -70,3 +70,8 @@
     - role: dotfiles
       tags:
         - dotfiles
+
+    # anyenv
+    - role: anyenv
+      tags:
+        - anyenv
