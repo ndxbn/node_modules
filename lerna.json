@@ -1,8 +1,7 @@
 {
   "packages": [
     "packages/*",
-    "packages__*/*",
-    "servers/*"
+    "packages__*/*"
   ],
   "command": {
     "publish": {
