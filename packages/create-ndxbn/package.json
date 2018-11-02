@@ -1,6 +1,6 @@
 {
   "name": "create-ndxbn",
-  "version": "0.0.3-alpha.0",
+  "version": "0.0.3",
   "description": "Create MonoRepo",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@ndxbn/preset-jest": "latest",
     "@ndxbn/preset-tslint": "latest",
-    "@ndxbn/preset-typescript": "0.0.4",
+    "@ndxbn/preset-typescript": "^0.0.5",
     "@types/jest": "23.3.8",
     "@types/node": "10.12.2",
     "jest": "~23.6.0",
