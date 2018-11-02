@@ -1,0 +1,8 @@
+#allow_duplicates: true
+#dependencies:
+#  - role: common
+#    vars:
+#      some_parameter: 3
+
+dependencies:
+  - role: dotfiles

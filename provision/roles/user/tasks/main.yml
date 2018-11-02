@@ -1,8 +1,0 @@
-- name: "Add System User"
-  user:
-    name: "{{ system_user }}"
-    system: yes
-
-- name: "Add Application User "
-  user:
-    name: "{{ application_user }}"

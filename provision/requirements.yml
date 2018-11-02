@@ -1,5 +1,0 @@
-- src: geerlingguy.docker
-- src: geerlingguy.git
-- src: geerlingguy.mysql
-- src: geerlingguy.redis
-- src: geerlingguy.repo-epel

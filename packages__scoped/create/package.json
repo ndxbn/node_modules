@@ -1,0 +1,19 @@
+{
+  "private": false,
+  "name": "@ndxbn/create",
+  "version": "0.0.2",
+  "description": "Create Node Module Package",
+  "main": "index.js",
+  "keywords": [],
+  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/ndxbn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndxbn/ndxbn/issues"
+  },
+  "homepage": "https://github.com/ndxbn/ndxbn/packages__scoped/create#readme",
+  "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875"
+}
