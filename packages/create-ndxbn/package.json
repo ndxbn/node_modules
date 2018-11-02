@@ -4,7 +4,7 @@
   "description": "Create MonoRepo",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "bin": "cli.js",
+  "bin": "lib/cli.js",
   "scripts": {
     "prepare": "run-s build",
     "start": "node lib/server.js",
