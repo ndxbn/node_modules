@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/@ndxbn/preset-typescript/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib"
+  },
+  "include": [
+    "src/index.ts",
+    "src/cli.ts",
+    "src/server.ts"
+  ]
+}
