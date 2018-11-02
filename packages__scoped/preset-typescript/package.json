@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@ndxbn/preset-typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "My TypeScript compiler Preset",
   "main": "tsconfig.json",
   "keywords": [],
