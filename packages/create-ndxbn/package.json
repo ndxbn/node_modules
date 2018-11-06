@@ -23,7 +23,7 @@
   "devDependencies": {
     "@ndxbn/preset-jest": "latest",
     "@ndxbn/preset-tslint": "latest",
-    "@ndxbn/preset-typescript": "^0.0.5",
+    "@ndxbn/preset-typescript": "latest",
     "@types/jest": "23.3.8",
     "@types/node": "10.12.2",
     "jest": "~23.6.0",
