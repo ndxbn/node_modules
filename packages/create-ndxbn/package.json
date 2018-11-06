@@ -24,7 +24,7 @@
     "@ndxbn/preset-jest": "latest",
     "@ndxbn/preset-tslint": "latest",
     "@ndxbn/preset-typescript": "latest",
-    "@types/jest": "23.3.8",
+    "@types/jest": "23.3.9",
     "@types/node": "10.12.2",
     "jest": "~23.6.0",
     "npm-run-all": "~4.1.3",
