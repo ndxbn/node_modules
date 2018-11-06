@@ -1,0 +1,17 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "dev-box/package.json",
+        "package.json",
+        "packages/create-ndxbn/package.json",
+        "packages/ndxbn/package.json",
+        "packages/nxn/package.json",
+        "packages__scoped/create/package.json",
+        "packages__scoped/preset-jest/package.json",
+        "packages__scoped/preset-tslint/package.json",
+        "packages__scoped/preset-typescript/package.json"
+      ]
+    }
+  }
+}
