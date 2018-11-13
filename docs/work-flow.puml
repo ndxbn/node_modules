@@ -1,0 +1,31 @@
+@startuml
+
+|master|
+start
+partition Initialization {
+  :`git clone repository`;
+  :`npm run bootstrap`;
+}
+
+|topic branch|
+repeat
+  partition Development {
+    :Develop Something;
+  }
+
+  partition Test {
+    :`npm run lint`;
+    :`npm test`;
+  }
+repeat while (is green?)
+
+:Create Pull Request
+merge into master;
+
+|master|
+partition Publishing {
+  :`lerna publish`;
+}
+
+end
+@enduml
