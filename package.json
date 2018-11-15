@@ -21,12 +21,19 @@
     "test:functional": "jest",
     "bootstrap": "run-p bootstrap:*",
     "bootstrap:packages": "lerna bootstrap",
+    "lint": "run-p lint:*",
+    "lint:packages": "lerna run lint",
+    "lint:scripts": "prettier -l \"scripts/**/*\"",
+    "lint:tests": "prettier -l \"tests/**/*\"",
+    "lint:config": "prettier -l \"config/*\"",
+    "lint:markdown": "prettier -l \"*.md\"",
     "fmt": "run-s format",
     "format": "run-p format:*",
-    "format:scripts": "npx prettier --write \"scripts/**/*\"",
-    "format:tests": "npx prettier --write \"tests/**/*\"",
-    "format:config": "npx prettier --write \"config/*\"",
-    "format:md": "npx prettier --write \"**/*.md\""
+    "format:packages": "lerna run fmt",
+    "format:scripts": "prettier --write \"scripts/**/*\"",
+    "format:tests": "prettier --write \"tests/**/*\"",
+    "format:config": "prettier --write \"config/*\"",
+    "format:markdown": "prettier --write \"*.md\""
   },
   "devDependencies": {
     "@ndxbn/preset-jest": "file:packages__scoped/preset-jest",
