@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/ndxbn/ndxbn#readme",
   "scripts": {
+    "prepublish": "echo use lerna publish && exit 1",
     "test": "run-s test:packages test:functional",
     "test:packages": "lerna run test",
     "test:functional": "jest",
