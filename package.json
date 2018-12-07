@@ -1,9 +1,11 @@
 {
-  "private": true,
+  "// main configuration": "",
   "name": "ndxbn",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.10-0",
+  "description": "ndxbn cli",
   "main": "",
+
+  "// pacakge meta data": "",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT",
@@ -15,6 +17,8 @@
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "homepage": "https://github.com/ndxbn/ndxbn#readme",
+
+  "// for development": "",
   "scripts": {
     "test": "run-s test:packages test:functional",
     "test:packages": "lerna run test",
