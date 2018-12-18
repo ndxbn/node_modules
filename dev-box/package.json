@@ -9,7 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/config": "0.0.34",
-    "@types/node": "10.12.16",
+    "@types/node": "10.12.17",
     "@types/shelljs": "^0.8.0",
     "@types/winston": "^2.3.9",
     "config": "^3.0.0",
