@@ -37,7 +37,7 @@
     "@ndxbn/preset-tslint": "file:packages/preset-tslint",
     "@ndxbn/preset-typescript": "file:packages/preset-typescript",
     "@types/config": "0.0.34",
-    "@types/jest": "23.3.10",
+    "@types/jest": "23.3.11",
     "config": "^3.0.0",
     "jest": "^23.6.0",
     "lerna": "^3.4.3",
