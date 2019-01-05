@@ -4,10 +4,10 @@
       "packages": [
         "dev-box/package.json",
         "package.json",
-        "packages__scoped/create/package.json",
-        "packages__scoped/preset-jest/package.json",
-        "packages__scoped/preset-tslint/package.json",
-        "packages__scoped/preset-typescript/package.json"
+        "packages/create/package.json",
+        "packages/preset-jest/package.json",
+        "packages/preset-tslint/package.json",
+        "packages/preset-typescript/package.json"
       ]
     }
   }
