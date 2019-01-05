@@ -5,6 +5,7 @@
         "dev-box/package.json",
         "package.json",
         "packages/create/package.json",
+        "packages/ndxbn/package.json",
         "packages/preset-jest/package.json",
         "packages/preset-tslint/package.json",
         "packages/preset-typescript/package.json"

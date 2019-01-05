@@ -1,9 +1,11 @@
 {
-  "private": true,
-  "name": "ndxbn-monorepo",
-  "version": "0.0.0",
-  "description": "",
+  "// main configuration": "",
+  "name": "ndxbn",
+  "version": "0.0.10-0",
+  "description": "ndxbn cli",
   "main": "",
+
+  "// pacakge meta data": "",
   "keywords": [],
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "license": "MIT",
@@ -15,6 +17,8 @@
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "homepage": "https://github.com/ndxbn/ndxbn#readme",
+
+  "// for development": "",
   "scripts": {
     "prepublish": "echo use lerna publish && exit 1",
     "test": "run-s test:packages test:functional",
@@ -37,29 +41,23 @@
     "format:markdown": "prettier --write \"*.md\""
   },
   "devDependencies": {
-    "@ndxbn/preset-jest": "file:packages__scoped/preset-jest",
-    "@ndxbn/preset-tslint": "file:packages__scoped/preset-tslint",
-    "@ndxbn/preset-typescript": "file:packages__scoped/preset-typescript",
+    "@ndxbn/preset-jest": "file:packages/preset-jest",
+    "@ndxbn/preset-tslint": "file:packages/preset-tslint",
+    "@ndxbn/preset-typescript": "file:packages/preset-typescript",
     "@types/config": "0.0.34",
-    "@types/jest": "23.3.9",
-    "config": "^2.0.1",
+    "@types/jest": "23.3.11",
+    "config": "^3.0.0",
     "jest": "^23.6.0",
     "lerna": "^3.4.3",
     "node-gyp": "^3.8.0",
     "npm-run-all": "^4.1.3",
     "prettier": "~1.15.2",
+    "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "tslint-config-prettier": "~1.16.0",
+    "tslint-config-prettier": "~1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.1.6",
     "winston": "^3.1.0"
-  },
-  "jest": {
-    "preset": "@ndxbn/preset-jest",
-    "rootDir": "",
-    "roots": [
-      "<rootDir>/tests/"
-    ]
   }
 }
