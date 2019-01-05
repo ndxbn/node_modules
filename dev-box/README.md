@@ -4,7 +4,7 @@
 
 - Vagrant
 - Oracle Virtual Box
-- Node.js LTS or later
+- Node.js LTS
 
 ## Startup and Login
 

@@ -1,77 +1,40 @@
-- name: "System Configuration"
+- name: "Install and Setup"
   hosts: all
   become: true
 
   roles:
+    # Bootstrapping
     - role: geerlingguy.repo-epel
       when: ansible_os_family == 'RedHat'
       # this tasks should be before other configuration roles/tasks
-  
     - role: geerlingguy.git
-
     - role: devel-tools
 
-- name: "Install and Setup Redis Server"
-  hosts: redis
-  become: true
-
-  roles:
-    - role: geerlingguy.redis
-      # rdb backup should be disabled
-      redis_save: []
-      redis_bind_interface: 0.0.0.0
-      tags:
-        - redis
-
-- name: "Install and Setup MySQL Server"
-  hosts: mysql
-  become: true
-
-  roles:
-    - role: geerlingguy.mysql
-      tags:
-        - mysql
-
-- name: "Install and Setup Application Server"
-  hosts: application
-  become: true
-
-  roles:
+    # Configuration
+    ## System Wide
     # docker
     - role: docker
       tags:
         - docker
-
-- name: "Install and Setup WorkStation Server"
-  hosts: work
-
-  roles:
-    # docker
-    - role: docker
-      tags:
-        - docker
-  
-    # install libraries to compile php
+    # Programing Language
     - role: php
       tags:
         - php
-  
-    # Node.js
     - role: nodejs
       tags:
         - nodejs
 
-    # zsh
-    - role: zsh
-      tags:
-        - zsh
-  
-    # dotfiles
-    - role: dotfiles
-      tags:
-        - dotfiles
-
-    # anyenv
+    # User Land
+    ## anyenv
     - role: anyenv
       tags:
         - anyenv
+
+    # Shell
+    - role: zsh
+      tags:
+        - zsh
+    #
+    - role: dotfiles
+      tags:
+        - dotfiles
