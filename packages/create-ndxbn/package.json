@@ -24,6 +24,7 @@
     "@ndxbn/preset-jest": "latest",
     "@ndxbn/preset-tslint": "latest",
     "@ndxbn/preset-typescript": "latest",
+    "@types/init-package-json": "^1.10.0",
     "@types/jest": "23.3.9",
     "@types/node": "10.12.7",
     "jest": "~23.6.0",
@@ -35,6 +36,10 @@
     "tslint-config-prettier": "~1.16.0",
     "tslint-plugin-prettier": "~2.0.0",
     "typescript": "~3.1.2"
+  },
+  "dependencies": {
+    "@types/npm": "^2.0.29",
+    "init-package-json": "^1.10.3"
   },
   "jest": {
     "preset": "@ndxbn/preset-jest"
