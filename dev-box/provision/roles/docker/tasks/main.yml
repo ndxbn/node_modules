@@ -1,7 +1,0 @@
-- name: "Install Docker and Docker Compose"
-  become: true
-  import_role:
-    name: geerlingguy.docker
-  vars:
-    docker_users:
-      - "{{ system_user_name }}"
