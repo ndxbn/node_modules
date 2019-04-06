@@ -2,9 +2,10 @@
   "name": "create-ndxbn",
   "version": "1.0.1",
   "description": "`npm init ndxbn` command",
-  "main": "index.js",
-  "bin": "cli.js",
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
   "scripts": {
+    "prepare": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/ndxbn/create-ndxbn/issues"
   },
-  "homepage": "https://github.com/ndxbn/create-ndxbn#readme"
+  "homepage": "https://github.com/ndxbn/create-ndxbn#readme",
+  "devDependencies": {
+    "@ndxbn/preset-typescript": "0.0.5",
+    "@types/node": "10.14.4",
+    "typescript": "3.4.2"
+  }
 }

@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
 // initial repository
-/// unless exists README.md, create it
-/// unless exists LICENSE file, create it
-/// create CODE_OF_CONDUCT.md
 /// create .github/ directory // GitHub specific
 /// create .gitignore
 /// create .travis.yml
