@@ -1,12 +1,13 @@
 #!/usr/bin/env node
-import Util from "./";
+import Application from "./";
 
-const util = new Util(process.cwd());
+const app = new Application(process.cwd());
 
 // initial repository
 /// create .github/ directory // GitHub specific
-util.mkdir(".github");
+app.mkdir(".github");
 /// create .gitignore
+app.template(".gitignore", ".gitignore", {});
 /// create .travis.yml
 /// create .editorconfig
 /// create renovate.json
