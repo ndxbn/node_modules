@@ -1,17 +1,14 @@
 {
   "private": false,
-  "//Essentials": "",
-  "name": "create-ndxbn",
-  "version": "1.0.2-4",
-  "description": "`npm init ndxbn` command",
-  "//Files": "",
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "description": "",
   "files": [
     "lib/",
     "src/"
   ],
   "main": "lib/index.js",
   "bin": "lib/cli.js",
-  "//Tasks": "",
   "scripts": {
     "prepare": "tsc -p .",
     "test": "node --version",
@@ -19,31 +16,24 @@
     "lint": "prettier -l \"**/*\"",
     "fmt": "prettier --write \"**/*\""
   },
-  "//Dependencies": "",
   "dependencies": {
-    "mustache": "^3.0.1"
   },
   "devDependencies": {
-    "@ndxbn/preset-typescript": "0.0.5",
-    "@types/mustache": "^0.8.32",
     "@types/node": "10.14.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
     "typescript": "3.4.2"
   },
-  "//Info": "",
   "keywords": [],
   "license": "MIT",
-  "//Links": "",
-  "homepage": "https://github.com/ndxbn/create-ndxbn#readme",
+  "homepage": "https://github.com/ndxbn/{{ name }}#readme",
   "bugs": {
-    "url": "https://github.com/ndxbn/create-ndxbn/issues"
+    "url": "https://github.com/ndxbn/{{ name }}/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndxbn/create-ndxbn.git"
+    "url": "git+https://github.com/ndxbn/{{ name }}.git"
   },
-  "// Maintainers": "",
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": []
 }

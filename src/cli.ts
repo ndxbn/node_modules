@@ -1,6 +1,8 @@
 #!/usr/bin/env node
+import * as path from "path";
 import Application from "./";
 
+const cwd = process.cwd();
 const app = new Application(process.cwd());
 
 // initial repository
@@ -16,6 +18,7 @@ app.template(".editorconfig", {});
 app.template("renovate.json", {});
 
 // create package.json
+app.template("package.json", {name: path.basename(cwd)});
 /// scripts
 
 // install typescript
