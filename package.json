@@ -1,0 +1,21 @@
+{
+  "name": "create-ndxbn",
+  "version": "0.0.5",
+  "description": "`npm init ndxbn` command",
+  "main": "index.js",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/create-ndxbn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndxbn/create-ndxbn/issues"
+  },
+  "homepage": "https://github.com/ndxbn/create-ndxbn#readme"
+}
