@@ -9,6 +9,7 @@ app.mkdir(".github");
 /// create .gitignore
 app.template(".gitignore", {});
 /// create .travis.yml
+app.template(".travis.yml", {});
 /// create .editorconfig
 /// create renovate.json
 
