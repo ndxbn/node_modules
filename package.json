@@ -2,7 +2,7 @@
   "private": false,
   "//Essentials": "",
   "name": "create-ndxbn",
-  "version": "1.0.2-4",
+  "version": "1.0.2-5",
   "description": "`npm init ndxbn` command",
   "//Files": "",
   "files": [
