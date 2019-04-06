@@ -41,10 +41,6 @@ app.mkdir("src");
 app.touch("src/index.ts");
 app.touch("src/cli.ts");
 
-// install jest
-// create jest.config.js
-
 // install prettier
-// create .prettierignore
+app.template(".prettierignore", {});
 
-// install eslint
