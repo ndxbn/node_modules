@@ -11,4 +11,3 @@ LICENSE
 
 # output dir
 lib/
-templates/*.mustache
