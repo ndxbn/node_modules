@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import * as path from "path";
+import * as childProcess from "child_process";
 import Application from "./";
 
 const cwd = process.cwd();
@@ -19,6 +20,17 @@ app.template("renovate.json", {});
 
 // create package.json
 app.template("package.json", {name: path.basename(cwd)});
+/// install dependencies
+/// nothing
+/// install devDependencies
+childProcess.execSync("npm install -D" + [
+  "@types/node",
+  "@types/jest",
+  "jest",
+  "npm-run-all",
+  "prettier",
+  "typescript"
+].join(" "));
 
 // install typescript
 // create tsconfig.json
