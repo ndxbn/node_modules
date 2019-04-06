@@ -49,17 +49,15 @@ export default class Application {
   /**
    * make file from template based on current working directory
    *
-   * @param templateName
-   * @param destPath
+   * @param templatePath
    * @param variables
    * @return true if success
    */
   public template(
-    templateName: string,
-    destPath: string,
+    templatePath: string,
     variables: unknown
   ): boolean {
-    const destPathAbsolute = path.resolve(this.cwd, destPath);
+    const destPathAbsolute = path.resolve(this.cwd, templatePath);
 
     if (fs.existsSync(destPathAbsolute)) {
       return false;
@@ -67,7 +65,7 @@ export default class Application {
     //
     const templateFilePath = path.resolve(
       this.templateDirectory,
-      templateName + ".mustache"
+      templatePath + ".mustache"
     );
     const output = mustache.render(
       fs.readFileSync(templateFilePath).toString(),

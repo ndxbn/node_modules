@@ -7,7 +7,7 @@ const app = new Application(process.cwd());
 /// create .github/ directory // GitHub specific
 app.mkdir(".github");
 /// create .gitignore
-app.template(".gitignore", ".gitignore", {});
+app.template(".gitignore", {});
 /// create .travis.yml
 /// create .editorconfig
 /// create renovate.json
