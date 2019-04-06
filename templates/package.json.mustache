@@ -11,7 +11,7 @@
   "bin": "lib/cli.js",
   "scripts": {
     "prepare": "tsc -p .",
-    "test": "node --version",
+    "test": "jest --forceExit",
     "pretest": "run-s lint",
     "lint": "prettier -l \"**/*\"",
     "fmt": "prettier --write \"**/*\""
@@ -31,5 +31,21 @@
     "url": "git+https://github.com/ndxbn/{{ name }}.git"
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
-  "contributors": []
+  "contributors": [],
+
+  "jest": {
+    "transform": {
+      "\\.tsx?$": "ts-jest"
+    },
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "index.js",
+      "index.ts"
+    ],
+    "testEnvironment": "node"
+  }
 }

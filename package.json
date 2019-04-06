@@ -21,8 +21,10 @@
   },
   "devDependencies": {
     "@ndxbn/preset-typescript": "0.0.5",
+    "@types/jest": "^24.0.11",
     "@types/mustache": "^0.8.32",
     "@types/node": "10.14.4",
+    "jest": "^24.7.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
     "typescript": "3.4.2"
@@ -41,5 +43,21 @@
   },
   "// Maintainers": "",
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
-  "contributors": []
+  "contributors": [],
+  "//Jest": "",
+  "jest": {
+    "transform": {
+      "\\.tsx?$": "ts-jest"
+    },
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "index.js",
+      "index.ts"
+    ],
+    "testEnvironment": "node"
+  }
 }
