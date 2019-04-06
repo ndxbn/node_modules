@@ -1,5 +1,8 @@
+# repository commons
 .idea/
 .*ignore
 
-#
 LICENSE
+
+# output dir
+lib/
