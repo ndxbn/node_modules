@@ -13,6 +13,7 @@ app.template(".travis.yml", {});
 /// create .editorconfig
 app.template(".editorconfig", {});
 /// create renovate.json
+app.template("renovate.json", {});
 
 // create package.json
 /// scripts
