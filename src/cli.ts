@@ -23,7 +23,7 @@ app.template("package.json", {name: path.basename(cwd)});
 /// install dependencies
 /// nothing
 /// install devDependencies
-childProcess.execSync("npm install -D" + [
+childProcess.execSync("npm install -D " + [
   "@types/node",
   "@types/jest",
   "jest",
