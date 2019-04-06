@@ -19,12 +19,15 @@ app.template("renovate.json", {});
 
 // create package.json
 app.template("package.json", {name: path.basename(cwd)});
-/// scripts
 
 // install typescript
 // create tsconfig.json
+app.template("tsconfig.json", {});
 // create "src/" directory
-// create "src/{index.ts, cli.ts, server.ts}
+app.mkdir("src");
+// create "src/{index.ts, cli.ts}
+app.touch("src/index.ts");
+app.touch("src/cli.ts");
 
 // install jest
 // create jest.config.js
