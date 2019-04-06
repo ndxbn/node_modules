@@ -11,6 +11,7 @@ app.template(".gitignore", {});
 /// create .travis.yml
 app.template(".travis.yml", {});
 /// create .editorconfig
+app.template(".editorconfig", {});
 /// create renovate.json
 
 // create package.json
