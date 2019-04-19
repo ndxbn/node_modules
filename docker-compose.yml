@@ -1,0 +1,97 @@
+version: '3'
+services:
+  redis:
+    image: "redis:alpine"
+    restart: always
+    ports:
+      - 6379:6379
+  mysql:
+    image: "mysql"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: ndxbn_devel
+      MYSQL_USER: ndxbn
+      MYSQL_PASSWORD: secretKey
+      MYSQL_ROOT_PASSWORD: secretKey
+  postgres:
+    image: "postgres:alpine"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ndxbn_devel
+      POSTGRES_USER: ndxbn
+      POSTGRES_PASSWORD: secretKey
+  mongo:
+    image: "mongo"
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ndxbn
+      MONGO_INITDB_ROOT_PASSWORD: secretKey
+  couchdb:
+    image: "couchdb"
+    restart: always
+    ports:
+      - 5984:5984
+    environment:
+      COUCHDB_USER: ndxbn
+      COUCHDB_PASSWORD: secretKey
+  neo4j:
+    image: "neo4j"
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    # neo4j default user/password is neo4j/neo4j
+  rabbitmq:
+    image: "rabbitmq:management-alpine"
+    restart: always
+    ports:
+      - 5672:5672
+      - 25672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: ndxbn
+      RABBITMQ_DEFAULT_PASS: secretKey
+  elasticsearch:
+    image: "elasticsearch:7.0.0"
+    restart: always
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      discovery.type: single-node
+  zookeeper:
+    image: "zookeeper"
+    restart: always
+    ports:
+      - 2181:2181
+    environment:
+      - ZOO_STANDALONE_ENABLED=true
+      - ZOO_SKIP_ACL=yes
+  mialhog:
+    image: "mailhog/mailhog"
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
+  minio:
+    image: "minio/minio"
+    restart: always
+    ports:
+      - 9000:9000
+    environment:
+      - MINIO_ACCESS_KEY=access
+      - MINIO_SECRET_KEY=secretKey
+    entrypoint:
+      - minio
+      - server
+      - /export
+  plantuml:
+    image: "plantuml/plantuml-server"
+    restart: always
+    ports:
+      - 18000:8000
