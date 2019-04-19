@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es2017",
     "module": "commonjs",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./lib",
 
     "strict": true,
     "noFallthroughCasesInSwitch": true,
