@@ -2,7 +2,7 @@
   "private": false,
   "//Essentials": "",
   "name": "create-ndxbn",
-  "version": "1.0.2-0",
+  "version": "1.0.3-0",
   "description": "`npm init ndxbn` command",
   "//Files": "",
   "main": "lib/index.js",
