@@ -53,10 +53,7 @@ export default class Application {
    * @param variables
    * @return true if success
    */
-  public template(
-    templatePath: string,
-    variables: unknown
-  ): boolean {
+  public template(templatePath: string, variables: unknown): boolean {
     const destPathAbsolute = path.resolve(this.cwd, templatePath);
 
     if (fs.existsSync(destPathAbsolute)) {

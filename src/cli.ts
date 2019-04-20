@@ -19,18 +19,21 @@ app.template(".editorconfig", {});
 app.template("renovate.json", {});
 
 // create package.json
-app.template("package.json", {name: path.basename(cwd)});
+app.template("package.json", { name: path.basename(cwd) });
 /// install dependencies
 /// nothing
 /// install devDependencies
-childProcess.execSync("npm install -D " + [
-  "@types/node",
-  "@types/jest",
-  "jest",
-  "npm-run-all",
-  "prettier",
-  "typescript"
-].join(" "));
+childProcess.execSync(
+  "npm install -D " +
+    [
+      "@types/node",
+      "@types/jest",
+      "jest",
+      "npm-run-all",
+      "prettier",
+      "typescript"
+    ].join(" ")
+);
 
 // install typescript
 // create tsconfig.json
@@ -43,4 +46,3 @@ app.touch("src/cli.ts");
 
 // install prettier
 app.template(".prettierignore", {});
-
