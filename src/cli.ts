@@ -31,6 +31,7 @@ childProcess.execSync(
       "jest",
       "npm-run-all",
       "prettier",
+      "ts-jest",
       "typescript"
     ].join(" ")
 );
