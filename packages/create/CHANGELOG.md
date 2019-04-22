@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/ndxbn/ndxbn/compare/@ndxbn/create@1.0.0...@ndxbn/create@1.1.0) (2019-04-22)
+
+
+### Features
+
+* **create:** export task ([690e1dd](https://github.com/ndxbn/ndxbn/commit/690e1dd))
+
+
+
+
+
 # [1.0.0](https://github.com/ndxbn/ndxbn/compare/@ndxbn/create@0.0.3...@ndxbn/create@1.0.0) (2019-04-22)
 
 
