@@ -1,0 +1,15 @@
+# editor settings
+.idea/
+.vscode/
+
+# dot files
+.*ignore
+.*rc
+.editorconfig
+.tsbuildinfo
+
+# repository commons
+LICENSE
+
+# output dir
+lib/

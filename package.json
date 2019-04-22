@@ -18,25 +18,13 @@
   "homepage": "https://github.com/ndxbn/ndxbn#readme",
   "// for development": "",
   "scripts": {
-    "prepublishOnly": "echo use lerna publish && exit 1",
     "test": "run-s test:packages test:functional",
     "test:packages": "lerna run test",
     "test:functional": "jest",
-    "bootstrap": "run-p bootstrap:*",
-    "bootstrap:packages": "lerna bootstrap",
-    "lint": "run-p lint:*",
-    "lint:packages": "lerna run lint",
-    "lint:scripts": "prettier -l \"scripts/**/*\"",
-    "lint:tests": "prettier -l \"tests/**/*\"",
-    "lint:config": "prettier -l \"config/*\"",
-    "lint:markdown": "prettier -l \"*.md\"",
+    "bootstrap": "lerna bootstrap",
+    "lint": "prettier -l \"**/*\"",
     "fmt": "run-s format",
-    "format": "run-p format:*",
-    "format:packages": "lerna run fmt",
-    "format:scripts": "prettier --write \"scripts/**/*\"",
-    "format:tests": "prettier --write \"tests/**/*\"",
-    "format:config": "prettier --write \"config/*\"",
-    "format:markdown": "prettier --write \"*.md\""
+    "format": "prettier --write \"**/**\""
   },
   "devDependencies": {
     "@ndxbn/preset-jest": "file:packages/preset-jest",
