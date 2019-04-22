@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-typescript@0.0.5...@ndxbn/preset-typescript@0.0.6) (2019-04-22)
+
+**Note:** Version bump only for package @ndxbn/preset-typescript
+
+
+
+
+
 <a name="0.0.5"></a>
 
 ## [0.0.5](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-typescript@0.0.3...@ndxbn/preset-typescript@0.0.5) (2018-11-02)
