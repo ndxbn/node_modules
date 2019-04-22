@@ -7,9 +7,19 @@
 .*rc
 .editorconfig
 .tsbuildinfo
+.gitkeep
+
 
 # repository commons
 LICENSE
 
 # output dir
 lib/
+
+# Vagrant
+Vagrantfile
+.vagrant/
+
+# extension
+## PlantUML
+*.puml
