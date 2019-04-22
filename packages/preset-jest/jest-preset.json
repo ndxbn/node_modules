@@ -2,14 +2,8 @@
   "transform": {
     "\\.tsx?$": "ts-jest"
   },
-  "roots": [
-    "<rootDir>/src/"
-  ],
+  "roots": ["<rootDir>/src/"],
   "collectCoverage": true,
-  "coveragePathIgnorePatterns": [
-    "/node_modules/",
-    "index.js",
-    "index.ts"
-  ],
+  "coveragePathIgnorePatterns": ["/node_modules/", "index.js", "index.ts"],
   "testEnvironment": "node"
 }
