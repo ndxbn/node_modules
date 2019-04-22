@@ -1,19 +1,20 @@
 {
   "private": false,
   "name": "@ndxbn/create",
-  "version": "0.0.3",
+  "version": "0.0.4-0",
   "description": "Create Node Module Package",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
   "scripts": {
     "prepare": "tsc -p .",
     "dev": "tsc -w -p .",
-    "test": "node --version"
+    "test": "jest"
   },
   "dependencies": {
     "mustache": "^3.0.1"
   },
   "devDependencies": {
+    "@ndxbn/preset-jest": "0.0.2",
     "@ndxbn/preset-typescript": "0.0.5",
     "@types/jest": "24.0.11",
     "@types/mustache": "0.8.32",

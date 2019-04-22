@@ -14,8 +14,10 @@ app.template("package.json", { name: path.basename(cwd) });
 childProcess.execSync(
   "npm install -D " +
     [
-      "@types/node",
+      "@ndxbn/preset-typescript",
+      "@ndxbn/preset-jest",
       "@types/jest",
+      "@types/node",
       "jest",
       "npm-run-all",
       "ts-jest",
