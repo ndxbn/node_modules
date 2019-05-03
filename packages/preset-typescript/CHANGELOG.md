@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @ndxbn/preset-typescript
 
-
-
-
-
 <a name="0.0.5"></a>
 
 ## [0.0.5](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-typescript@0.0.3...@ndxbn/preset-typescript@0.0.5) (2018-11-02)

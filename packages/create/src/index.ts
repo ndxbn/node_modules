@@ -78,31 +78,31 @@ export default class Application {
 export function task(cwd: string) {
   const app = new Application(cwd);
 
-// create package.json
+  // create package.json
   app.template("package.json", { name: path.basename(cwd) });
-/// install dependencies
-/// nothing
-/// install devDependencies
+  /// install dependencies
+  /// nothing
+  /// install devDependencies
   childProcess.execSync(
     "npm install -D " +
-    [
-      "@ndxbn/preset-typescript",
-      "@ndxbn/preset-jest",
-      "@types/jest",
-      "@types/node",
-      "jest",
-      "npm-run-all",
-      "ts-jest",
-      "typescript"
-    ].join(" ")
+      [
+        "@ndxbn/preset-typescript",
+        "@ndxbn/preset-jest",
+        "@types/jest",
+        "@types/node",
+        "jest",
+        "npm-run-all",
+        "ts-jest",
+        "typescript"
+      ].join(" ")
   );
 
-// install typescript
-// create tsconfig.json
+  // install typescript
+  // create tsconfig.json
   app.template("tsconfig.json", {});
-// create "src/" directory
+  // create "src/" directory
   app.mkdir("src");
-// create "src/{index.ts, cli.ts}
+  // create "src/{index.ts, cli.ts}
   app.touch("src/index.ts");
   app.touch("src/cli.ts");
 }
