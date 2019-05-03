@@ -23,3 +23,7 @@ Vagrantfile
 # extension
 ## PlantUML
 *.puml
+
+
+# template file
+*.*.mustache
