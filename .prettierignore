@@ -13,8 +13,9 @@
 # repository commons
 LICENSE
 
-# output dir
+# project directory
 lib/
+coverage/
 
 # Vagrant
 Vagrantfile
