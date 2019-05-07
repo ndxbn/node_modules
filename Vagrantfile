@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   end
 
   # vagrant plugin configuration
-  ## agrant-vbguest
+  ## vagrant-vbguest
   config.vbguest.no_install = true
 
   ## Cache
