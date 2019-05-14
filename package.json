@@ -29,11 +29,15 @@
     "format": "prettier --write \"**/**\""
   },
   "devDependencies": {
+    "@commitlint/cli": "7.6.1",
+    "@commitlint/config-conventional": "7.6.0",
+    "@commitlint/config-lerna-scopes": "7.6.0",
     "@ndxbn/preset-jest": "file:packages/preset-jest",
     "@ndxbn/preset-typescript": "file:packages/preset-typescript",
     "@types/config": "0.0.34",
     "@types/jest": "24.0.12",
     "config": "3.1.0",
+    "husky": "^2.2.0",
     "jest": "24.8.0",
     "lerna": "3.13.4",
     "npm-run-all": "4.1.5",
@@ -45,5 +49,10 @@
   },
   "jest": {
     "preset": "@ndxbn/preset-jest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
