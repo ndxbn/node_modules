@@ -13,10 +13,14 @@ git clone git@github.com:ndxbn/ndxbn.git
 cd ndxbn
 npm ci
 
-docker-compose up
-# or use vagrant:
-#vagrant up
+git config commit.template .gitcommit.txt
 
+pushd vagrant
+docker-compose up
+popd
+# or use vagrant:
+#vagrant plugin install vagrant-disksize vagrant-vbguest vagrant-docker-compose
+#vagrant up
 ```
 
 ## Workflow

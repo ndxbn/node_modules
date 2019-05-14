@@ -64,21 +64,15 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", host_ip: "127.0.0.1",
                     host: 18000, guest: 18000
 
-  # provision
-  config.vm.synced_folder "./vagrant", "/vagrant"
-  ## pre-install
-  config.vm.provision :shell, inline: "yum -y update"
-  ## install docker
-  config.vm.provision :shell, path: "https://get.docker.com"
-  config.vm.provision :shell, inline: "systemctl start docker && systemctl enable docker"
-  ## install docker-compose
-  config.vm.provision :shell, inline: <<-SHELL
-  sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" \
-    -o /usr/local/bin/docker-compose
-  chmod +x /usr/local/bin/docker-compose
-  SHELL
 
-  # deploy docker-compose.yml and start middleware
-  config.vm.provision :file, source: "./docker-compose.yml", destination: "/home/vagrant/docker-compose.yml"
-  config.vm.provision :shell, inline: "/usr/local/bin/docker-compose up -d"
+  # provisions
+  config.vm.synced_folder "./vagrant", "/vagrant",
+                          id: "provision",
+                          type: "nfs",
+                          mount_options: %w(dmode=775 fmode=664)
+
+  config.vm.provision :docker
+  config.vm.provision :docker_compose, compose_version: "1.24.0",
+                      yml: "/vagrant/docker-compose.yml",
+                      run: "always"
 end
