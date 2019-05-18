@@ -25,6 +25,5 @@ Vagrantfile
 ## PlantUML
 *.puml
 
-
 # template file
 *.*.mustache
