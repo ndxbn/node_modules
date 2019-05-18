@@ -1,0 +1,52 @@
+{
+  "private": false,
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
+  "scripts": {
+    "prepare": "tsc -p .",
+    "dev": "tsc -w -p .",
+    "test": "jest --forceExit",
+    "pretest": "run-s lint",
+    "lint": "prettier -l \"**/*\"",
+    "fmt": "prettier --write \"**/*\""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/ndxbn/{{ name }}#readme",
+  "bugs": {
+    "url": "https://github.com/ndxbn/{{ name }}/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/{{ name }}.git"
+  },
+  "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
+  "contributors": [],
+
+  "jest": {
+    "transform": {
+      "\\.tsx?$": "ts-jest"
+    },
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "index.js",
+      "index.ts"
+    ],
+    "testEnvironment": "node"
+  }
+}
