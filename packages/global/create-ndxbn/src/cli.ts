@@ -17,6 +17,8 @@ app.template(".travis.yml", {});
 app.template(".editorconfig", {});
 /// create renovate.json
 app.template("renovate.json", {});
+/// create .commitlintrc.yml
+app.template(".commitlintrc.yml", {});
 
 // create package.json
 app.template("package.json", { name: path.basename(cwd) });
@@ -26,8 +28,13 @@ app.template("package.json", { name: path.basename(cwd) });
 childProcess.execSync(
   "npm install -D " +
     [
+      "@commitlint/cli",
+      "@commitlint/config-conventional",
+      "@ndxbn/preset-jest",
+      "@ndxbn/preset-typescript",
       "@types/node",
       "@types/jest",
+      "husky",
       "jest",
       "npm-run-all",
       "prettier",

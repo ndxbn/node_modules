@@ -1,6 +1,6 @@
 # create-ndxbn
 
-`npm init ndxbn` command
+`npm init ndxbn` command; initialize repository
 
 ## Requirements
 
