@@ -24,7 +24,7 @@
   "keywords": [],
   "license": "MIT",
   "//Links": "",
-  "homepage": "https://github.com/ndxbn/ndxbn",
+  "homepage": "https://github.com/ndxbn/ndxbn/tree/master/packages/global/create-ndxbn",
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
