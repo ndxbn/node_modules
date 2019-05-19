@@ -21,6 +21,17 @@ describe("hasRecords method", () => {
   });
 });
 
+describe("reset method", () => {
+  test("should return true when have records", async () => {
+    const logger = new TestLogger();
+    await logger.info("foo");
+
+    expect(logger.hasRecords("info")).toBeTruthy();
+    logger.reset();
+    expect(logger.hasRecords("info")).toBeFalsy();
+  });
+});
+
 describe("hasRecord method", () => {
   test("should return true when have records", async () => {
     const logger = new TestLogger();
@@ -116,16 +127,5 @@ describe("hasRecordThatMatches method", () => {
 
     expect(logger.hasRecordThatMatches(/^foo.*/, "info")).toBeFalsy();
     expect(logger.hasRecordThatMatches(/bar$/, "info")).toBeFalsy();
-  });
-});
-
-describe("reset method", () => {
-  test("should return true when have records", async () => {
-    const logger = new TestLogger();
-    await logger.info("foo");
-
-    expect(logger.hasRecords("info")).toBeTruthy();
-    logger.reset();
-    expect(logger.hasRecords("info")).toBeFalsy();
   });
 });

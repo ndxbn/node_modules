@@ -27,6 +27,10 @@ export default class TestLogger extends AbstractLogger {
     return this.records.find(record => record.level === level) != undefined;
   }
 
+  public reset(): void {
+    this.records = [];
+  }
+
   public hasRecord(record: Record): boolean {
     return this.hasRecordThatPasses(haystack => {
       if (haystack.message === record.message) {
@@ -63,9 +67,5 @@ export default class TestLogger extends AbstractLogger {
       return false;
     }
     return this.records.find(predicate) != undefined;
-  }
-
-  public reset(): void {
-    this.records = [];
   }
 }
