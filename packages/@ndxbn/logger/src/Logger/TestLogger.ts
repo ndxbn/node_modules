@@ -30,7 +30,6 @@ export default class TestLogger extends AbstractLogger {
   public hasRecord(record: Record): boolean {
     return this.hasRecordThatPasses(haystack => {
       if (haystack.message === record.message) {
-
         try {
           assert.deepStrictEqual(haystack.context, record.context);
           return true;
@@ -43,14 +42,23 @@ export default class TestLogger extends AbstractLogger {
   }
 
   public hasRecordThatContains(message: string, level: LogLevel): boolean {
-    return this.hasRecordThatPasses(record => record.message.includes(message), level);
+    return this.hasRecordThatPasses(
+      record => record.message.includes(message),
+      level
+    );
   }
 
   public hasRecordThatMatches(regex: RegExp, level: LogLevel): boolean {
-    return this.hasRecordThatPasses(record => regex.test(record.message), level);
+    return this.hasRecordThatPasses(
+      record => regex.test(record.message),
+      level
+    );
   }
 
-  public hasRecordThatPasses(predicate: (record: Record) => boolean, level: LogLevel): boolean {
+  public hasRecordThatPasses(
+    predicate: (record: Record) => boolean,
+    level: LogLevel
+  ): boolean {
     if (!this.hasRecords(level)) {
       return false;
     }

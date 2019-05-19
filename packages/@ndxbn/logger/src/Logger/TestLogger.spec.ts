@@ -92,7 +92,6 @@ describe("hasRecordThatContains method", () => {
     expect(logger.hasRecordThatContains("foo", "info")).toBeFalsy();
     expect(logger.hasRecordThatContains("o b", "info")).toBeFalsy();
   });
-
 });
 
 describe("hasRecordThatMatches method", () => {
