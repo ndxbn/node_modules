@@ -84,6 +84,15 @@ describe("hasRecordThatContains method", () => {
     expect(logger.hasRecordThatContains("baz", "info")).toBeFalsy();
     expect(logger.hasRecordThatContains("ob", "info")).toBeFalsy();
   });
+
+  test("should return false when does not records but have other loglevel record,", async () => {
+    const logger = new TestLogger();
+    await logger.warning("foo bar");
+
+    expect(logger.hasRecordThatContains("foo", "info")).toBeFalsy();
+    expect(logger.hasRecordThatContains("o b", "info")).toBeFalsy();
+  });
+
 });
 
 describe("hasRecordThatMatches method", () => {
@@ -100,6 +109,14 @@ describe("hasRecordThatMatches method", () => {
     await logger.info("foo bar");
 
     expect(logger.hasRecordThatMatches(/zzz/, "info")).toBeFalsy();
+  });
+
+  test("should return false when does not records but have other loglevel record,", async () => {
+    const logger = new TestLogger();
+    await logger.warning("foo bar");
+
+    expect(logger.hasRecordThatMatches(/^foo.*/, "info")).toBeFalsy();
+    expect(logger.hasRecordThatMatches(/bar$/, "info")).toBeFalsy();
   });
 });
 
