@@ -12,61 +12,61 @@ export default abstract class AbstractLogger implements LoggerInterface {
   /**
    * @inheritDoc
    */
-  abstract log(level: LogLevel, message: string, context: Context): Promise<void>;
+  abstract log(level: LogLevel, message: string, context?: Context): Promise<void>;
 
   /**
    * @inheritDoc
    */
-  public emergency(message: string, context: Context): Promise<void> {
+  public emergency(message: string, context?: Context): Promise<void> {
     return this.log("emergency", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public alert(message: string, context: Context): Promise<void> {
+  public alert(message: string, context?: Context): Promise<void> {
     return this.log("alert", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public critical(message: string, context: Context): Promise<void> {
+  public critical(message: string, context?: Context): Promise<void> {
     return this.log("critical", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public error(message: string, context: Context): Promise<void> {
+  public error(message: string, context?: Context): Promise<void> {
     return this.log("error", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public warning(message: string, context: Context): Promise<void> {
+  public warning(message: string, context?: Context): Promise<void> {
     return this.log("warning", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public notice(message: string, context: Context): Promise<void> {
+  public notice(message: string, context?: Context): Promise<void> {
     return this.log("notice", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public info(message: string, context: Context): Promise<void> {
+  public info(message: string, context?: Context): Promise<void> {
     return this.log("info", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public debug(message: string, context: Context): Promise<void> {
+  public debug(message: string, context?: Context): Promise<void> {
     return this.log("debug", message, context);
   }
 }
