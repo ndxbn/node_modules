@@ -72,6 +72,7 @@ describe("hasRecordThatContains method", () => {
     expect(logger.hasRecordThatContains("ob", "info")).toBeFalsy();
   });
 });
+
 describe("hasRecordThatMatches method", () => {
   test("should return true when have records", async () => {
     const logger = new TestLogger();
@@ -86,5 +87,16 @@ describe("hasRecordThatMatches method", () => {
     await logger.info("foo bar");
 
     expect(logger.hasRecordThatMatches(/zzz/, "info")).toBeFalsy();
+  });
+});
+
+describe("reset method", () => {
+  test("should return true when have records", async () => {
+    const logger = new TestLogger();
+    await logger.info("foo");
+
+    expect(logger.hasRecords("info")).toBeTruthy();
+    logger.reset();
+    expect(logger.hasRecords("info")).toBeFalsy();
   });
 });
