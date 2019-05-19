@@ -33,20 +33,12 @@
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": [],
-
   "jest": {
-    "transform": {
-      "\\.tsx?$": "ts-jest"
-    },
-    "roots": [
-      "<rootDir>/src/"
-    ],
-    "collectCoverage": true,
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "index.js",
-      "index.ts"
-    ],
-    "testEnvironment": "node"
+  "preset": "@ndxbn/preset-jest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
