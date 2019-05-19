@@ -28,39 +28,33 @@ export default class TestLogger extends AbstractLogger {
   }
 
   public hasRecord(record: Record): boolean {
-    return (
-      this.records.find(haystack => {
-        // "level" and "message" is primitive, but "context" is object.
-        if (
-          haystack.level === record.level &&
-          haystack.message === record.message
-        ) {
-          try {
-            assert.deepStrictEqual(haystack.context, record.context);
-            return true;
-          } catch (e) {
-            return false;
-          }
+    return this.hasRecordThatPasses(haystack => {
+      if (haystack.message === record.message) {
+
+        try {
+          assert.deepStrictEqual(haystack.context, record.context);
+          return true;
+        } catch (e) {
+          return false;
         }
-        return false;
-      }) != undefined
-    );
+      }
+      return false;
+    }, record.level);
   }
 
   public hasRecordThatContains(message: string, level: LogLevel): boolean {
-    return (
-      this.records.find(
-        record => record.level === level && record.message.includes(message)
-      ) != undefined
-    );
+    return this.hasRecordThatPasses(record => record.message.includes(message), level);
   }
 
   public hasRecordThatMatches(regex: RegExp, level: LogLevel): boolean {
-    return (
-      this.records.find(
-        record => record.level === level && regex.test(record.message)
-      ) != undefined
-    );
+    return this.hasRecordThatPasses(record => regex.test(record.message), level);
+  }
+
+  public hasRecordThatPasses(predicate: (record: Record) => boolean, level: LogLevel): boolean {
+    if (!this.hasRecords(level)) {
+      return false;
+    }
+    return this.records.find(predicate) != undefined;
   }
 
   public reset(): void {
