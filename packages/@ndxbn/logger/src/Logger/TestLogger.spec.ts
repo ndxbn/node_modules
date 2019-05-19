@@ -26,33 +26,46 @@ describe("hasRecord method", () => {
     const logger = new TestLogger();
     await logger.info("foo");
 
-    expect(logger.hasRecord({ level: "info", message: "foo", context: {} })).toBeTruthy();
+    expect(
+      logger.hasRecord({ level: "info", message: "foo", context: {} })
+    ).toBeTruthy();
   });
 
   test("should return false when does not have records", () => {
     const logger = new TestLogger();
 
-    expect(logger.hasRecord({ level: "notice", message: "foo", context: {} })).toBeFalsy();
+    expect(
+      logger.hasRecord({ level: "notice", message: "foo", context: {} })
+    ).toBeFalsy();
   });
   test("should return false when does not have records: loglevel", async () => {
     const logger = new TestLogger();
     await logger.info("foo");
 
-    expect(logger.hasRecord({ level: "warning", message: "foo", context: {} })).toBeFalsy();
+    expect(
+      logger.hasRecord({ level: "warning", message: "foo", context: {} })
+    ).toBeFalsy();
   });
   test("should return false when does not have records: message", async () => {
     const logger = new TestLogger();
     await logger.info("foo");
 
-    expect(logger.hasRecord({ level: "info", message: "bar", context: {} })).toBeFalsy();
+    expect(
+      logger.hasRecord({ level: "info", message: "bar", context: {} })
+    ).toBeFalsy();
   });
   test("should return false when does not have records: context", async () => {
     const logger = new TestLogger();
     await logger.info("foo");
 
-    expect(logger.hasRecord({ level: "info", message: "foo", context: { bar: "baz" } })).toBeFalsy();
+    expect(
+      logger.hasRecord({
+        level: "info",
+        message: "foo",
+        context: { bar: "baz" }
+      })
+    ).toBeFalsy();
   });
-
 });
 
 describe("hasRecordThatContains method", () => {

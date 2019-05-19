@@ -1,6 +1,5 @@
 import AbstractLogger from "./AbstractLogger";
 
-
 /**
  * This Logger can be used to avoid conditional log calls.
  *
@@ -10,12 +9,11 @@ import AbstractLogger from "./AbstractLogger";
  * blocks.
  */
 export default class NullLogger extends AbstractLogger {
-
   /**
    * @inheritDoc
    */
   public async log() {
     // noop
-    return ;
+    return;
   }
 }

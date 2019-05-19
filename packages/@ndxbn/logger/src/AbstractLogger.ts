@@ -12,7 +12,11 @@ export default abstract class AbstractLogger implements LoggerInterface {
   /**
    * @inheritDoc
    */
-  abstract log(level: LogLevel, message: string, context?: Context): Promise<void>;
+  abstract log(
+    level: LogLevel,
+    message: string,
+    context?: Context
+  ): Promise<void>;
 
   /**
    * @inheritDoc
