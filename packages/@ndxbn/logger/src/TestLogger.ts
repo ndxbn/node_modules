@@ -1,6 +1,6 @@
-import { AbstractLogger } from "../";
-import { LogLevel, Context } from "../constants";
 import * as assert from "assert";
+import AbstractLogger from "./AbstractLogger";
+import { Context, LogLevel } from "./constants";
 
 type Record = {
   level: LogLevel;
