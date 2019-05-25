@@ -4,6 +4,6 @@
   },
   "roots": ["<rootDir>/src/"],
   "collectCoverage": true,
-  "coveragePathIgnorePatterns": ["/node_modules/", "index.js", "index.ts"],
+  "collectCoverageFrom" : ["**/*"],
   "testEnvironment": "node"
 }
