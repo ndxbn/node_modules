@@ -7,6 +7,3 @@ export type LogLevel =
   | "notice"
   | "info"
   | "debug";
-export type Context = {
-  [k: string]: { toString(): string };
-};

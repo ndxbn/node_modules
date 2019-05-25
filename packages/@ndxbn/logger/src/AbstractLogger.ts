@@ -1,4 +1,5 @@
-import { Context, LogLevel } from "./constants";
+import { LogLevel } from "./constants";
+import { Context } from "./Context";
 import LoggerInterface from "./LoggerInterface";
 
 /**

@@ -1,5 +1,5 @@
 type LogLevel = import("./constants").LogLevel;
-type Context = import("./constants").Context;
+type Context = import("./Context").Context;
 
 /**
  * Describes a logger instance.

@@ -1,6 +1,7 @@
 import * as assert from "assert";
 import AbstractLogger from "./AbstractLogger";
-import { Context, LogLevel } from "./constants";
+import { LogLevel } from "./constants";
+import { Context } from "./Context";
 
 type Record = {
   level: LogLevel;
