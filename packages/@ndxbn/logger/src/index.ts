@@ -1,6 +1,6 @@
 // Logger
 export { default as LoggerInterface } from "./LoggerInterface";
-export { default as AbstractLogger } from "./AbstractLogger";
+export { default as AbstractLogger } from "./LoggerBase";
 export * from "./constants";
 
 // concrete Logger

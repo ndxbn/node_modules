@@ -9,7 +9,7 @@ import LoggerInterface from "./LoggerInterface";
  * reduce boilerplate code that a simple Logger that does the same thing with
  * messages regardless of the error level has to implement.
  */
-export default abstract class AbstractLogger implements LoggerInterface {
+export default abstract class LoggerBase implements LoggerInterface {
   /**
    * @inheritDoc
    */

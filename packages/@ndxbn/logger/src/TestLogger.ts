@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import AbstractLogger from "./AbstractLogger";
+import LoggerBase from "./LoggerBase";
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
 
@@ -13,7 +13,7 @@ type Record = {
  *
  * It records all records and gives you access to them for verification.
  */
-export default class TestLogger extends AbstractLogger {
+export default class TestLogger extends LoggerBase {
   public records: Record[] = [];
 
   public async log(

@@ -1,4 +1,4 @@
-import AbstractLogger from "./AbstractLogger";
+import LoggerBase from "./LoggerBase";
 
 /**
  * This Logger can be used to avoid conditional log calls.
@@ -8,7 +8,7 @@ import AbstractLogger from "./AbstractLogger";
  * is a good way to avoid littering your code with `if ($this->logger) { }`
  * blocks.
  */
-export default class NullLogger extends AbstractLogger {
+export default class NullLogger extends LoggerBase {
   /**
    * @inheritDoc
    */
