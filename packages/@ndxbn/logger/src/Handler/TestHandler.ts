@@ -1,4 +1,5 @@
 import { Context } from "../Context";
+import * as assert from "assert";
 import HandlerInterface from "./HandlerInterface";
 
 type Record = {
@@ -14,7 +15,7 @@ type Record = {
 export default class TestHandler implements HandlerInterface {
   public records: Record[] = [];
 
-  public async log(message: string, context?: Context): Promise<void> {
+  public async log(message: string, context: Context = {}): Promise<void> {
     this.records.push({ message, context });
   }
 
@@ -26,6 +27,19 @@ export default class TestHandler implements HandlerInterface {
     this.records = [];
   }
 
+  public hasRecord(record: Record): boolean {
+    return this.hasRecordThatPasses(haystack => {
+      if (haystack.message === record.message) {
+        try {
+          assert.deepStrictEqual(haystack.context, record.context);
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+      return false;
+    });
+  }
 
   public hasRecordThatContains(message: string): boolean {
     return this.hasRecordThatPasses(
