@@ -22,7 +22,7 @@ describe("hasRecords method", () => {
 });
 
 describe("reset method", () => {
-  test("should return true when have records", async () => {
+  test("after reset, logger has not any record", async () => {
     const logger = new TestLogger();
     await logger.info("foo");
 

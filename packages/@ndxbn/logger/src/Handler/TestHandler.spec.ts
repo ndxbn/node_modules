@@ -16,7 +16,7 @@ describe("hasRecords method", () => {
 });
 
 describe("reset method", () => {
-  test("should return true when have records", async () => {
+  test("after reset, handler has not any record", async () => {
     const handler = new TestHandler();
     await handler.log("foo");
 
