@@ -1,5 +1,5 @@
-import NoopFormatter from "./NoopFormatter";
+import RawFormatter from "./RawFormatter";
 
-test("NoopFormatter should return message as is.", () => {
-  expect((new NoopFormatter()).format("foo bar; baz")).toBe("foo bar; baz");
+test("RawFormatter should return message as is.", () => {
+  expect((new RawFormatter()).format("foo bar; baz")).toBe("foo bar; baz");
 });
