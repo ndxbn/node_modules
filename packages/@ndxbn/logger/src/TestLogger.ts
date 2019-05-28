@@ -20,7 +20,7 @@ export default class TestLogger extends LoggerBase implements LoggerInterface {
   public async log(
     level: LogLevel,
     message: string,
-    context: Context = {}
+    context: Context = new Map()
   ): Promise<void> {
     this.records.push({ level, message, context });
   }

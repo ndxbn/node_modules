@@ -15,7 +15,7 @@ type Record = {
 export default class TestHandler implements HandlerInterface {
   public records: Record[] = [];
 
-  public async log(message: string, context: Context = {}): Promise<void> {
+  public async log(message: string, context: Context = new Map()): Promise<void> {
     this.records.push({ message, context });
   }
 

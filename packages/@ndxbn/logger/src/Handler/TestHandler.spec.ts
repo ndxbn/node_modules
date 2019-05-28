@@ -32,7 +32,7 @@ describe("hasRecord method", () => {
     await handler.log("foo");
 
     expect(
-      handler.hasRecord({ message: "foo", context: {} })
+      handler.hasRecord({ message: "foo", context: new Map() })
     ).toBeTruthy();
   });
 
@@ -40,7 +40,7 @@ describe("hasRecord method", () => {
     const handler = new TestHandler();
 
     expect(
-      handler.hasRecord({ message: "foo", context: {} })
+      handler.hasRecord({ message: "foo", context: new Map() })
     ).toBeFalsy();
   });
   test("should return false when does not have records: message", async () => {
@@ -48,7 +48,7 @@ describe("hasRecord method", () => {
     await handler.log("foo");
 
     expect(
-      handler.hasRecord({ message: "bar", context: {} })
+      handler.hasRecord({ message: "bar", context: new Map() })
     ).toBeFalsy();
   });
   test("should return false when does not have records: context", async () => {
@@ -58,7 +58,7 @@ describe("hasRecord method", () => {
     expect(
       handler.hasRecord({
         message: "foo",
-        context: { bar: "baz" }
+        context: new Map([["bar", "baz"]])
       })
     ).toBeFalsy();
   });
