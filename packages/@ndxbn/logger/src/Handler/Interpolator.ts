@@ -10,7 +10,7 @@ export default class Interpolator {
    *
    * Users SHOULD NOT pre-escape placeholder values since they can not know in which context the data will be displayed.
    */
-  public static interpolate(message: string, context: Context = new Map()): string {
+  public static interpolate(message: string, context: Context): string {
     let newMessage: string = message;
 
     for (const [key, value] of context) {
