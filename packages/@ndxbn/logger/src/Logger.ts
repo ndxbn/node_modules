@@ -41,7 +41,7 @@ export default class Logger extends LoggerBase implements LoggerInterface {
    * Contexts added this method, always pass to all handlers.
    */
   public addContext(context: Context): this {
-    this.generalContext = { ...this.generalContext, ...context };
+    this.generalContext = new Map([...this.generalContext, ...context]);
 
     return this;
   }
