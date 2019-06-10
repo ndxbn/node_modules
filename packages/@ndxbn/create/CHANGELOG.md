@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @ndxbn/create
 
-
-
-
-
 # [1.1.0](https://github.com/ndxbn/ndxbn/compare/@ndxbn/create@1.0.0...@ndxbn/create@1.1.0) (2019-04-22)
 
 ### Features
