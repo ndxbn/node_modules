@@ -15,7 +15,10 @@ export default class Logger extends LoggerBase implements LoggerInterface {
   private generalContext: Context;
 
   // factories
-  public constructor(handlers: HandlerInterface[] = [], generalContext: Context = new Map()) {
+  public constructor(
+    handlers: HandlerInterface[] = [],
+    generalContext: Context = new Map()
+  ) {
     super();
 
     this.gateway.handlers.push(...handlers);
@@ -23,7 +26,11 @@ export default class Logger extends LoggerBase implements LoggerInterface {
     this.generalContext = generalContext;
   }
 
-  public async log(level: LogLevel, message: string, context: Context = new Map()): Promise<void> {
+  public async log(
+    level: LogLevel,
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     const contextExtended = new Map([...this.generalContext, ...context]);
 
     await this.gateway.log(level, message, contextExtended);

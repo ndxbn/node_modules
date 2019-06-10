@@ -5,7 +5,7 @@ import HandlerInterface from "./HandlerInterface";
 type Record = {
   message: string;
   context: Context;
-}
+};
 
 /**
  * Used for testing purposes.
@@ -15,7 +15,10 @@ type Record = {
 export default class TestHandler implements HandlerInterface {
   public records: Record[] = [];
 
-  public async log(message: string, context: Context = new Map()): Promise<void> {
+  public async log(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     this.records.push({ message, context });
   }
 
@@ -42,15 +45,11 @@ export default class TestHandler implements HandlerInterface {
   }
 
   public hasRecordThatContains(message: string): boolean {
-    return this.hasRecordThatPasses(
-      record => record.message.includes(message)
-    );
+    return this.hasRecordThatPasses(record => record.message.includes(message));
   }
 
   public hasRecordThatMatches(regex: RegExp): boolean {
-    return this.hasRecordThatPasses(
-      record => regex.test(record.message)
-    );
+    return this.hasRecordThatPasses(record => regex.test(record.message));
   }
 
   public hasRecordThatPasses(predicate: (record: Record) => boolean): boolean {

@@ -32,9 +32,13 @@ test("context that added with Logger.addContext() method, always pass to handler
   // call logging method without context
   await logger.debug("debug foo");
   // but handler given {"foo": "FOO FOO"} context
-  expect(handler.hasRecord({ message: "debug foo", context: fooContext })).toBe(true);
+  expect(handler.hasRecord({ message: "debug foo", context: fooContext })).toBe(
+    true
+  );
   // not empty context
-  expect(handler.hasRecord({ message: "debug foo", context: new Map() })).not.toBe(true);
+  expect(
+    handler.hasRecord({ message: "debug foo", context: new Map() })
+  ).not.toBe(true);
 
   done();
 });
@@ -48,13 +52,28 @@ test("context priority", async done => {
   await logger.debug("debug foo", fooBazContext);
 
   // "foo" will be over rode
-  const fooBarBazContextOverRode = new Map([["foo", "FOO BAR"], ["bar", "BAR BAR"], ["baz", "BAZ BAZ"]]);
+  const fooBarBazContextOverRode = new Map([
+    ["foo", "FOO BAR"],
+    ["bar", "BAR BAR"],
+    ["baz", "BAZ BAZ"]
+  ]);
   // "foo" will not be over rode
-  const fooBarBazContextAdded = new Map([["foo", "FOO FOO"], ["bar", "BAR BAR"], ["baz", "BAZ BAZ"]]);
+  const fooBarBazContextAdded = new Map([
+    ["foo", "FOO FOO"],
+    ["bar", "BAR BAR"],
+    ["baz", "BAZ BAZ"]
+  ]);
 
   // if same name context is exists in args, it general context will over-ride.
-  expect(handler.hasRecord({ message: "debug foo", context: fooBarBazContextOverRode })).toBe(true);
-  expect(handler.hasRecord({ message: "debug foo", context: fooBarBazContextAdded })).not.toBe(true);
+  expect(
+    handler.hasRecord({
+      message: "debug foo",
+      context: fooBarBazContextOverRode
+    })
+  ).toBe(true);
+  expect(
+    handler.hasRecord({ message: "debug foo", context: fooBarBazContextAdded })
+  ).not.toBe(true);
 
   done();
 });

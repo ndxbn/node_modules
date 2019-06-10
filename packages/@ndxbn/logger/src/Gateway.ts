@@ -10,12 +10,18 @@ export default class Gateway {
     this.handlingLoLevels = new Set<LogLevel>(Gateway.getLogLevels().keys());
   }
 
-  public async log(logLevel: LogLevel, message: string, context: Context): Promise<void[]> {
+  public async log(
+    logLevel: LogLevel,
+    message: string,
+    context: Context
+  ): Promise<void[]> {
     if (!this.isHandling(logLevel)) {
       return [];
     }
 
-    return Promise.all(this.handlers.map(handler => handler.log(message, context)));
+    return Promise.all(
+      this.handlers.map(handler => handler.log(message, context))
+    );
   }
 
   protected isHandling(logLevel: LogLevel): boolean {

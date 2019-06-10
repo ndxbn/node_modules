@@ -22,56 +22,80 @@ export default abstract class LoggerBase implements LoggerInterface {
   /**
    * @inheritDoc
    */
-  public async emergency(message: string, context: Context = new Map()): Promise<void> {
+  public async emergency(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("emergency", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async alert(message: string, context: Context = new Map()): Promise<void> {
+  public async alert(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("alert", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async critical(message: string, context: Context = new Map()): Promise<void> {
+  public async critical(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("critical", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async error(message: string, context: Context = new Map()): Promise<void> {
+  public async error(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("error", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async warning(message: string, context: Context = new Map()): Promise<void> {
+  public async warning(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("warning", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async notice(message: string, context: Context = new Map()): Promise<void> {
+  public async notice(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("notice", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async info(message: string, context: Context = new Map()): Promise<void> {
+  public async info(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("info", message, context);
   }
 
   /**
    * @inheritDoc
    */
-  public async debug(message: string, context: Context = new Map()): Promise<void> {
+  public async debug(
+    message: string,
+    context: Context = new Map()
+  ): Promise<void> {
     return await this.log("debug", message, context);
   }
 }

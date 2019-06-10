@@ -20,9 +20,16 @@ export default class Interpolator {
     return newMessage;
   }
 
-  private static replaceAll(message: string, replaceWhat: string, replaceTo: string): string {
+  private static replaceAll(
+    message: string,
+    replaceWhat: string,
+    replaceTo: string
+  ): string {
     // escape RegExp special chars
-    const replaceWhatEscaped = replaceWhat.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+    const replaceWhatEscaped = replaceWhat.replace(
+      /[-\/\\^$*+?.()|[\]{}]/g,
+      "\\$&"
+    );
 
     return message.replace(new RegExp(replaceWhatEscaped, "g"), replaceTo);
   }
