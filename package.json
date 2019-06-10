@@ -1,4 +1,5 @@
 {
+  "private": true,
   "// main configuration": "",
   "name": "ndxbn",
   "version": "0.0.10-0",
