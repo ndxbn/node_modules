@@ -11,12 +11,18 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "tsc -p .",
-    "dev": "tsc -w -p ."
+    "dev": "tsc -w -p .",
+    "test": "jest"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@ndxbn/preset-jest": "0.0.2",
     "@ndxbn/preset-typescript": "^0.0.7",
+    "@types/jest": "^24.0.13",
     "@types/node": "12.0.7",
+    "jest": "^24.8.0",
     "npm-run-all": "4.1.5",
+    "ts-jest": "^24.0.2",
     "typescript": "3.5.1"
   },
   "keywords": [],
@@ -31,5 +37,8 @@
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": [],
+  "jest": {
+    "preset": "@ndxbn/preset-jest"
+  },
   "gitHead": "c77e786c4674a532dc41142f27c101797c996da4"
 }
