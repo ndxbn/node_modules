@@ -16,3 +16,4 @@ rules:
       - style
       - test
       - chore
+      - release
