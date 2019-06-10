@@ -21,7 +21,7 @@
     "prepare": "run-s bootstrap build",
     "bootstrap": "lerna bootstrap --ignore-scripts",
     "build": "lerna run prepare",
-    "publish": "lerna publish --yes",
+    "publish": "lerna publish --yes --ignore-scripts",
     "test": "jest",
     "lint": "prettier -l \"**/*\"",
     "fmt": "run-s format",
