@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "{{ name }}",
+  "name": "@ndxbn/logger",
   "version": "0.0.0",
   "description": "",
   "files": [
@@ -8,25 +8,26 @@
     "src/"
   ],
   "main": "lib/index.js",
-  "bin": "lib/cli.js",
   "scripts": {
     "prepare": "tsc -p .",
-    "dev": "tsc -w -p .",
-    "test": "jest"
+    "dev": "tsc -w -p ."
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@ndxbn/preset-typescript": "0.0.6",
+    "@types/node": "^12.0.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.4.5"
   },
   "keywords": [],
   "license": "MIT",
-  "homepage": "https://github.com/ndxbn/ndxbn/packages/{{ name }}/#readme",
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/logger/#readme",
   "bugs": {
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndxbn/ndxbn/packages/{{ name }}.git"
+    "url": "git+https://github.com/ndxbn/ndxbn/packages/logger.git"
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": []

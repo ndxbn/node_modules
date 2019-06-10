@@ -7,21 +7,16 @@
   "bin": "lib/cli.js",
   "scripts": {
     "prepare": "tsc -p .",
-    "dev": "tsc -w -p .",
-    "test": "jest"
+    "dev": "tsc -w -p ."
   },
   "dependencies": {
     "mustache": "^3.0.1"
   },
   "devDependencies": {
-    "@ndxbn/preset-jest": "0.0.2",
     "@ndxbn/preset-typescript": "0.0.5",
-    "@types/jest": "24.0.12",
     "@types/mustache": "0.8.32",
     "@types/node": "10.14.6",
-    "jest": "24.8.0",
     "npm-run-all": "4.1.5",
-    "ts-jest": "24.0.2",
     "typescript": "3.4.5"
   },
   "keywords": [],
@@ -35,8 +30,5 @@
     "url": "git+https://github.com/ndxbn/ndxbn.git"
   },
   "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875",
-  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
-  "jest": {
-    "preset": "@ndxbn/preset-jest"
-  }
+  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>"
 }

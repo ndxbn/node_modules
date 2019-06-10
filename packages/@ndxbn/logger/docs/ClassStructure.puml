@@ -1,0 +1,46 @@
+@startuml
+title class structure
+
+interface Handler {
+  + log(message: String, context? Context): void
+}
+
+abstract class concreteHandler implements Handler{
+  - formatter: Formatter
+  - baseContext: Context
+}
+note bottom of concreteHandler
+  Log を送る先によって、
+    - JSON とか L-TSV などの「よく使われるフォーマット」がある、だろう。
+    - 「必要となる送信元の情報」がある、だろう。
+    - 日時 などの「よく使われる情報とその書き方」がある、だろう。
+end note
+
+class Gateway {
+  - handlers: Handler[]
+
+  - isHandling(): Boolean
+  + log(level: LogLevel, message: string, context: Context)
+}
+
+Gateway -> Handler
+
+class Logger {
+  --
+  << Log Levels >>
+  emergency(message: String)
+  alert(message: String)
+  critical(message: String)
+  error(message: String)
+  warning(message: String)
+  notice(message: String)
+  info(message: String)
+  debug(message: String)
+}
+note left of Logger
+  almost, You use this class.
+end note
+
+Logger -> Gateway
+
+@enduml
