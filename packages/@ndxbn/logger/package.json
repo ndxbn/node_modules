@@ -1,5 +1,6 @@
 {
   "name": "@ndxbn/logger",
+  "access": "public",
   "version": "1.0.1",
   "description": "",
   "files": [
@@ -28,5 +29,9 @@
     "url": "git+https://github.com/ndxbn/ndxbn/packages/logger.git"
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
-  "contributors": []
+  "contributors": [],
+  "gitHead": "c77e786c4674a532dc41142f27c101797c996da4",
+  "publishConfig": {
+    "access": "public"
+  }
 }
