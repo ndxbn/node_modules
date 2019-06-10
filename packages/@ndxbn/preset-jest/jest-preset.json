@@ -1,7 +1,5 @@
 {
-  "transform": {
-    "\\.tsx?$": "ts-jest"
-  },
+  "preset": "ts-jest",
   "roots": ["<rootDir>/src/"],
   "collectCoverage": true,
   "collectCoverageFrom": ["**/*"],

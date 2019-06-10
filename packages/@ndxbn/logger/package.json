@@ -17,12 +17,9 @@
   "dependencies": {},
   "devDependencies": {
     "@ndxbn/preset-jest": "0.0.2",
-    "@ndxbn/preset-typescript": "^0.0.7",
-    "@types/jest": "24.0.13",
+    "@ndxbn/preset-typescript": "0.0.7",
     "@types/node": "12.0.7",
-    "jest": "24.8.0",
     "npm-run-all": "4.1.5",
-    "ts-jest": "24.0.2",
     "typescript": "3.5.1"
   },
   "keywords": [],

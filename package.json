@@ -23,9 +23,7 @@
     "bootstrap": "lerna bootstrap --ignore-scripts",
     "build": "lerna run prepare",
     "release": "lerna publish --yes --ignore-scripts",
-    "test": "run-s test:packages test:functional",
-    "test:packages": "lerna run test",
-    "test:functional": "jest",
+    "test": "jest",
     "lint": "prettier -l \"**/*\"",
     "fmt": "run-s format",
     "format": "prettier --write \"**/**\""
@@ -50,7 +48,10 @@
     "winston": "3.2.1"
   },
   "jest": {
-    "preset": "@ndxbn/preset-jest"
+    "preset": "@ndxbn/preset-jest",
+    "projects": [
+      "<rootDir>/packages/*/*"
+    ]
   },
   "husky": {
     "hooks": {
