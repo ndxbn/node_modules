@@ -87,8 +87,12 @@ export function task(cwd: string) {
     "npm install -D " +
       [
         "@ndxbn/preset-typescript",
+        "@ndxbn/preset-jest",
+        "@types/jest",
         "@types/node",
+        "jest",
         "npm-run-all",
+        "ts-jest",
         "typescript"
       ].join(" ")
   );
