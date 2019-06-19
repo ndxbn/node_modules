@@ -12,7 +12,8 @@
   "scripts": {
     "prepare": "tsc -p .",
     "dev": "tsc -w -p .",
-    "start": "node lib/server.js"
+    "start": "node lib/server.js",
+    "build-production": "tsc -p tsconfig.production.json"
   },
   "dependencies": {
     "express": "^4.17.1"
