@@ -1,3 +1,4 @@
+// entry point as server process
 import express from "express";
 
 const app = express();
