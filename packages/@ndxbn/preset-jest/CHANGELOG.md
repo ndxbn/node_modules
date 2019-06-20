@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.1.0...@ndxbn/preset-jest@0.2.0) (2019-06-10)
+
+
+### Features
+
+* **preset-jest:** add peerDependencies ts-jest ([98bafa9](https://github.com/ndxbn/ndxbn/commit/98bafa9))
+
+
+
+
+
 # [0.1.0](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.0.2...@ndxbn/preset-jest@0.1.0) (2019-06-10)
 
 ### Features

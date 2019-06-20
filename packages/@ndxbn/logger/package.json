@@ -2,7 +2,7 @@
   "private": false,
   "name": "@ndxbn/logger",
   "access": "public",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "files": [
     "lib/",
@@ -11,13 +11,15 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "tsc -p .",
-    "dev": "tsc -w -p ."
+    "dev": "tsc -w -p .",
+    "test": "jest"
   },
   "devDependencies": {
-    "@ndxbn/preset-typescript": "^0.0.7",
-    "@types/node": "12.0.2",
+    "@ndxbn/preset-jest": "0.0.2",
+    "@ndxbn/preset-typescript": "^0.0.8",
+    "@types/node": "12.0.8",
     "npm-run-all": "4.1.5",
-    "typescript": "3.4.5"
+    "typescript": "3.5.2"
   },
   "keywords": [],
   "license": "MIT",
@@ -31,5 +33,8 @@
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": [],
+  "jest": {
+    "preset": "@ndxbn/preset-jest"
+  },
   "gitHead": "c77e786c4674a532dc41142f27c101797c996da4"
 }
