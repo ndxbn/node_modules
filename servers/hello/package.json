@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "hello",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
+  "scripts": {
+    "prepare": "tsc -p .",
+    "dev": "tsc -w -p .",
+    "start": "node lib/server.js",
+    "build-production": "tsc -p tsconfig.production.json"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@ndxbn/preset-jest": "^0.2.0",
+    "@ndxbn/preset-typescript": "0.0.8",
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.8",
+    "jest": "^24.8.0",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/hello/#readme",
+  "bugs": {
+    "url": "https://github.com/ndxbn/ndxbn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/ndxbn/packages/hello.git"
+  },
+  "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
+  "contributors": [],
+  "jest": {
+    "preset": "@ndxbn/preset-jest"
+  }
+}
