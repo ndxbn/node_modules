@@ -2,7 +2,7 @@
   "private": false,
   "name": "@ndxbn/logger",
   "access": "public",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "files": [
     "lib/",
