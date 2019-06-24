@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "hello",
+  "name": "@ndxbn/hello",
   "version": "0.0.1",
   "description": "",
   "files": [
@@ -42,5 +42,6 @@
   "contributors": [],
   "jest": {
     "preset": "@ndxbn/preset-jest"
-  }
+  },
+  "gitHead": "70f95fec3f2c4a09dc1116706963643874bc64c7"
 }
