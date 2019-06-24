@@ -1,6 +1,4 @@
 {
-  "private": false,
-  "access": "public",
   "name": "@ndxbn/create",
   "version": "1.1.4",
   "description": "Create Node Module Package",
@@ -32,6 +30,10 @@
     "url": "git+https://github.com/ndxbn/ndxbn.git"
   },
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "jest": {
     "preset": "@ndxbn/preset-jest"
   },
