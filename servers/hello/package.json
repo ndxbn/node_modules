@@ -1,12 +1,9 @@
 {
   "private": false,
+  "access": "public",
   "name": "@ndxbn/hello",
   "version": "0.0.2",
   "description": "",
-  "files": [
-    "lib/",
-    "src/"
-  ],
   "main": "lib/index.js",
   "bin": "lib/cli.js",
   "scripts": {
