@@ -91,7 +91,6 @@ export function task(cwd: string) {
         "@types/jest",
         "@types/node",
         "jest",
-        "npm-run-all",
         "ts-jest",
         "typescript"
       ].join(" ")
