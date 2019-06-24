@@ -30,7 +30,7 @@
     "type": "git",
     "url": "git+https://github.com/ndxbn/ndxbn.git"
   },
-  "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875",
+  "gitHead": "70f95fec3f2c4a09dc1116706963643874bc64c7",
   "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
   "jest": {
     "preset": "@ndxbn/preset-jest"
