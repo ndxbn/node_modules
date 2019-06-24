@@ -12,6 +12,7 @@
 # repository commons
 LICENSE
 CHANGELOG.md
+*.log
 
 # project directory
 lib/
@@ -20,6 +21,9 @@ coverage/
 # Vagrant
 Vagrantfile
 .vagrant/
+
+# Docker
+Dockerfile
 
 # extension
 ## PlantUML

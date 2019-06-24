@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/@ndxbn/*", "packages/global/*"],
+  "packages": ["packages/@ndxbn/*", "packages/global/*", "servers/*"],
   "command": {
     "publish": {
       "allowBranch": "master",
