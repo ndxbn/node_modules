@@ -40,5 +40,5 @@
   "jest": {
     "preset": "@ndxbn/preset-jest"
   },
-  "gitHead": "2c7277c8f44dc808fc1aca1018212e3633c16db8"
+  "gitHead": "83d38f4ee86f675a2fde6c50555ef1c41cd80e18"
 }
