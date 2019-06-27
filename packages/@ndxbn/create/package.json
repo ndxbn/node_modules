@@ -29,7 +29,8 @@
     "type": "git",
     "url": "git+https://github.com/ndxbn/ndxbn.git"
   },
-  "author": "sitri@ndxbn <sitri.ndxbn@gmail.com>",
+  "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
+  "contributors": [],
   "private": false,
   "publishConfig": {
     "access": "public"
