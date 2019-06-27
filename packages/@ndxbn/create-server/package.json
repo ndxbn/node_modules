@@ -1,0 +1,45 @@
+{
+  "name": "create-server",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/index.js",
+  "bin": "lib/cli.js",
+  "scripts": {
+    "prepare": "tsc -p .",
+    "dev": "tsc -w -p .",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@ndxbn/preset-jest": "^0.2.1",
+    "@ndxbn/preset-typescript": "0.0.9",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/ndxbn/ndxbn/packages/create-server/#readme",
+  "bugs": {
+    "url": "https://github.com/ndxbn/ndxbn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/ndxbn/packages/create-server.git"
+  },
+  "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
+  "contributors": [],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "preset": "@ndxbn/preset-jest"
+  }
+}
