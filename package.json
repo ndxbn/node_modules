@@ -36,7 +36,7 @@
     "@ndxbn/preset-typescript": "file:packages/@ndxbn/preset-typescript",
     "@types/config": "0.0.34",
     "@types/jest": "24.0.15",
-    "config": "3.1.0",
+    "config": "3.2.0",
     "husky": "2.7.0",
     "jest": "24.8.0",
     "lerna": "3.15.0",
