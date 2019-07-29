@@ -1,5 +1,5 @@
 {
-  "name": "create-server",
+  "name": "@ndxbn/create-server",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
@@ -36,5 +36,6 @@
   },
   "jest": {
     "preset": "@ndxbn/preset-jest"
-  }
+  },
+  "gitHead": "f0e9b05984093a6025d40517d2c6872e34899b95"
 }
