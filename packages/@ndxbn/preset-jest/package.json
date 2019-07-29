@@ -1,6 +1,6 @@
 {
   "name": "@ndxbn/preset-jest",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "My Jest Preset",
   "main": "jest-preset.json",
   "keywords": [],

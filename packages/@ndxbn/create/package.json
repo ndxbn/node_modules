@@ -1,6 +1,6 @@
 {
   "name": "@ndxbn/create",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Create Node Module Package",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
