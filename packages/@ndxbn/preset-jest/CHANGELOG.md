@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.2.1...@ndxbn/preset-jest@0.2.2) (2019-07-29)
+
+
+### Bug Fixes
+
+* **preset-jest:** cannot use preset in preset ([1dfa3c8](https://github.com/ndxbn/ndxbn/commit/1dfa3c8))
+
+
+
+
+
 ## [0.2.1](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.2.0...@ndxbn/preset-jest@0.2.1) (2019-06-24)
 
 **Note:** Version bump only for package @ndxbn/preset-jest

@@ -1,6 +1,6 @@
 {
   "name": "create-ndxbn",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "`npm init ndxbn` command",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
@@ -12,7 +12,7 @@
     "mustache": "^3.0.1"
   },
   "devDependencies": {
-    "@ndxbn/preset-typescript": "^0.0.9",
+    "@ndxbn/preset-typescript": "^0.0.10",
     "@types/mustache": "0.8.32",
     "@types/node": "10.14.13",
     "typescript": "3.5.3"

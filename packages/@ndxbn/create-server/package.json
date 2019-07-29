@@ -1,6 +1,6 @@
 {
   "name": "create-server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "bin": "lib/cli.js",
@@ -9,10 +9,9 @@
     "dev": "tsc -w -p .",
     "test": "jest"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@ndxbn/preset-jest": "^0.2.1",
-    "@ndxbn/preset-typescript": "0.0.9",
+    "@ndxbn/preset-jest": "^0.2.2",
+    "@ndxbn/preset-typescript": "^0.0.10",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.8",
     "jest": "24.8.0",

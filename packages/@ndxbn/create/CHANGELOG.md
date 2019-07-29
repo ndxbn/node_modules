@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/ndxbn/ndxbn/compare/@ndxbn/create@1.1.5...@ndxbn/create@1.1.6) (2019-07-29)
+
+
+### Bug Fixes
+
+* **create:** remove package.files field ([69e0ead](https://github.com/ndxbn/ndxbn/commit/69e0ead))
+
+
+
+
+
 ## [1.1.5](https://github.com/ndxbn/ndxbn/compare/@ndxbn/create@1.1.4...@ndxbn/create@1.1.5) (2019-06-24)
 
 **Note:** Version bump only for package @ndxbn/create

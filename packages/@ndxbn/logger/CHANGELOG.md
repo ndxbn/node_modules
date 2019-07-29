@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](http://github.com/ndxbn/ndxbn/packages/logger/compare/@ndxbn/logger@1.0.6...@ndxbn/logger@1.0.7) (2019-07-29)
+
+**Note:** Version bump only for package @ndxbn/logger
+
+
+
+
+
 ## [1.0.6](http://github.com/ndxbn/ndxbn/packages/logger/compare/@ndxbn/logger@1.0.5...@ndxbn/logger@1.0.6) (2019-06-24)
 
 **Note:** Version bump only for package @ndxbn/logger
