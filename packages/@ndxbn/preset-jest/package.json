@@ -21,5 +21,8 @@
   "gitHead": "deb4d2d7968cef20a0ce00459199288317eef875",
   "peerDependencies": {
     "ts-jest": "24.0.2"
+  },
+  "dependencies": {
+    "ts-jest": "^24.0.2"
   }
 }
