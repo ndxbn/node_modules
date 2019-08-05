@@ -18,6 +18,9 @@ CHANGELOG.md
 lib/
 coverage/
 
+# Node.js
+package-lock.json
+
 # Vagrant
 Vagrantfile
 .vagrant/
