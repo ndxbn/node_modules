@@ -1,0 +1,16 @@
+name: A workflow for Node.js CI
+on: push
+
+jobs:
+  build:
+    name: Node.js ${{ matrix.node }} test
+    runs-on: ubuntu-16.04
+    strategy:
+      matrix:
+        node: [ '12', '10' ]
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - run: npm cit
