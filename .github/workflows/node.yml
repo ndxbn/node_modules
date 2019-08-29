@@ -1,0 +1,5 @@
+steps:
+  - uses: actions/checkout@master
+  - uses: actions/setup-node@v1
+  - run: npm ci
+  - run: npm t
