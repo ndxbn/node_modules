@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.cpus = 4
+    vb.cpus = 2
     vb.memory = 4096
   end
 
@@ -72,7 +72,7 @@ Vagrant.configure("2") do |config|
                           mount_options: %w(dmode=775 fmode=664)
 
   config.vm.provision :docker
-  config.vm.provision :docker_compose, compose_version: "1.24.0",
+  config.vm.provision :docker_compose, compose_version: "1.24.1",
                       yml: "/vagrant/docker-compose.yml",
                       run: "always"
 end
