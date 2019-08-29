@@ -1,9 +1,0 @@
-language: node_js
-jobs:
-  include:
-    - stage: test
-      node_js: node
-    - node_js: lts/*
-    - node_js: lts/*
-      script:
-        - npm run lint
