@@ -15,9 +15,7 @@ npm ci
 
 git config commit.template .gitcommit.txt
 
-pushd vagrant
-docker-compose up
-popd
+docker-compose up -f vagrant/docker-compose.yml
 # or use vagrant:
 #vagrant plugin install vagrant-disksize vagrant-vbguest vagrant-docker-compose
 #vagrant up
