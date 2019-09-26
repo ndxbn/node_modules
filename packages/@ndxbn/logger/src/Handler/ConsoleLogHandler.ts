@@ -1,12 +1,12 @@
 import { Context } from "../Context";
 import { FormatterInterface, RawFormatter } from "./Formatter";
-import HandlerInterface from "./HandlerInterface";
-import Interpolator from "./Interpolator";
+import { HandlerInterface } from "./HandlerInterface";
+import { Interpolator } from "./Interpolator";
 
 /**
  * output with `console.log()`
  */
-export default class ConsoleLogHandler implements HandlerInterface {
+export class ConsoleLogHandler implements HandlerInterface {
   protected readonly formatter: FormatterInterface = new RawFormatter();
 
   protected static get contextBase(): Context {

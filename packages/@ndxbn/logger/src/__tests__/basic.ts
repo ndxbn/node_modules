@@ -1,4 +1,4 @@
-import Logger, { Context, TestHandler } from "../";
+import { Logger, Context, TestHandler } from "../";
 
 test("Logger.create() method returns a logger instance that has console logger", async done => {
   jest.spyOn(console, "log");
@@ -45,10 +45,16 @@ test("context that added with Logger.addContext() method, always pass to handler
 
 test("context priority", async done => {
   const handler = new TestHandler();
-  const fooBarContext = new Context([["foo", () => "FOO FOO"], ["bar", () => "BAR BAR"]]);
+  const fooBarContext = new Context([
+    ["foo", () => "FOO FOO"],
+    ["bar", () => "BAR BAR"]
+  ]);
   const logger = new Logger([handler], fooBarContext);
 
-  const fooBazContext = new Context([["foo", () => "FOO BAR"], ["baz", () => "BAZ BAZ"]]);
+  const fooBazContext = new Context([
+    ["foo", () => "FOO BAR"],
+    ["baz", () => "BAZ BAZ"]
+  ]);
   await logger.debug("debug foo", fooBazContext);
 
   // "foo" will be over rode
@@ -66,7 +72,10 @@ test("context priority", async done => {
 
   // if same name context is exists in args, it general context will over-ride.
   expect(
-    handler.hasRecord({ message: "debug foo", context: fooBarBazContextOverRode })
+    handler.hasRecord({
+      message: "debug foo",
+      context: fooBarBazContextOverRode
+    })
   ).toBe(true);
   expect(
     handler.hasRecord({ message: "debug foo", context: fooBarBazContextAdded })

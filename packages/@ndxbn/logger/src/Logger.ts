@@ -1,12 +1,12 @@
 import { LogLevel } from "./constants";
-import Gateway from "./Gateway";
+import { Gateway } from "./Gateway";
 import { ConsoleLogHandler } from "./Handler";
-import LoggerBase from "./LoggerBase";
-import LoggerInterface from "./LoggerInterface";
+import { LoggerBase } from "./LoggerBase";
+import { LoggerInterface } from "./LoggerInterface";
 import { HandlerInterface } from "./Handler";
 import { Context } from "./Context";
 
-export default class Logger extends LoggerBase implements LoggerInterface {
+export class Logger extends LoggerBase implements LoggerInterface {
   public static create() {
     return new Logger([new ConsoleLogHandler()]);
   }

@@ -14,7 +14,7 @@ type Context = import("./Context").Context;
  * to produce a stack trace, it MUST be in a key named "exception".
  *
  */
-export default interface LoggerInterface {
+export interface LoggerInterface {
   /**
    * System is unusable.
    */

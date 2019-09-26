@@ -1,15 +1,14 @@
 // Logger
-export { default } from "./Logger";
-export { default as LoggerInterface } from "./LoggerInterface";
-export { default as LoggerBase } from "./LoggerBase";
+export { Logger } from "./Logger";
+export { LoggerInterface } from "./LoggerInterface";
+export { LoggerBase } from "./LoggerBase";
 export { LogLevel } from "./constants";
-export {Context} from "./Context";
+export { Context } from "./Context";
 
 // concrete Logger
-export { default as NullLogger } from "./NullLogger";
+export { NullLogger } from "./NullLogger";
 
 // LoggerAware
-export { default as LoggerAwareInterface } from "./LoggerAwareInterface";
 // export * from "./LoggerAwareTrait";
 
 // Handler and Formatter

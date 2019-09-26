@@ -1,6 +1,6 @@
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
-import LoggerInterface from "./LoggerInterface";
+import { LoggerInterface } from "./LoggerInterface";
 
 /**
  * This is a simple Logger implementation that other Loggers can inherit from.
@@ -9,7 +9,7 @@ import LoggerInterface from "./LoggerInterface";
  * reduce boilerplate code that a simple Logger that does the same thing with
  * messages regardless of the error level has to implement.
  */
-export default abstract class LoggerBase implements LoggerInterface {
+export abstract class LoggerBase implements LoggerInterface {
   /**
    * @inheritDoc
    */

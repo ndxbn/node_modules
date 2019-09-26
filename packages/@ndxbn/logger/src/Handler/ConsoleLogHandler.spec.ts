@@ -1,4 +1,4 @@
-import ConsoleLogHandler from "./ConsoleLogHandler";
+import { ConsoleLogHandler } from "./ConsoleLogHandler";
 import { Context } from "../Context";
 
 test("ConsoleLogHandler should write with console.log() method", async done => {

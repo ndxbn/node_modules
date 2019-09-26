@@ -1,4 +1,4 @@
-import TestHandler from "./TestHandler";
+import { TestHandler } from "./TestHandler";
 import { Context } from "../Context";
 
 describe("hasRecords method", () => {

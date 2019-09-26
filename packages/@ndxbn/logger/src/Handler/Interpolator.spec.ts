@@ -1,4 +1,4 @@
-import Interpolator from "./Interpolator";
+import { Interpolator } from "./Interpolator";
 import { Context } from "../Context";
 
 const context = new Context([["foo", () => "FOOBAR"]]);

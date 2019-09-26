@@ -1,9 +1,9 @@
 // handlers
 // interface
-export { default as HandlerInterface } from "./HandlerInterface";
+export { HandlerInterface } from "./HandlerInterface";
 // concretes
-export { default as ConsoleLogHandler } from "./ConsoleLogHandler";
-export { default as TestHandler } from "./TestHandler";
+export { ConsoleLogHandler } from "./ConsoleLogHandler";
+export { TestHandler } from "./TestHandler";
 
 // formatters
 export * from "./Formatter";

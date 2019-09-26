@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import HandlerInterface from "./HandlerInterface";
+import { HandlerInterface } from "./HandlerInterface";
 
 type Record = {
   message: string;
@@ -11,7 +11,7 @@ type Record = {
  *
  * It records all records and gives you access to them for verification.
  */
-export default class TestHandler implements HandlerInterface {
+export class TestHandler implements HandlerInterface {
   public records: Record[] = [];
 
   public async log(
@@ -30,9 +30,10 @@ export default class TestHandler implements HandlerInterface {
   }
 
   public hasRecord(record: Record): boolean {
-    return this.hasRecordThatPasses(haystack =>
-      haystack.message === record.message &&
-      haystack.context.equals(record.context)
+    return this.hasRecordThatPasses(
+      haystack =>
+        haystack.message === record.message &&
+        haystack.context.equals(record.context)
     );
   }
 
