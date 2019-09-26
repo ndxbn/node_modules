@@ -58,7 +58,7 @@ describe("hasRecord method", () => {
     expect(
       handler.hasRecord({
         message: "foo",
-        context: new Map([["bar", "baz"]])
+        context: new Map([["bar", () => "baz"]])
       })
     ).toBeFalsy();
   });

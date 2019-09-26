@@ -10,7 +10,7 @@ export default class ConsoleLogHandler implements HandlerInterface {
   protected readonly formatter: FormatterInterface = new RawFormatter();
 
   protected static get contextBase(): Context {
-    return new Map([["datetime", new Date().toISOString()]]);
+    return new Map([["datetime", () => new Date().toISOString()]]);
   }
 
   public async log(message: string, context: Context): Promise<void> {

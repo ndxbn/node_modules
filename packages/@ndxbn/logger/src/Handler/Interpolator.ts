@@ -14,7 +14,7 @@ export default class Interpolator {
     let newMessage: string = message;
 
     for (const [key, value] of context) {
-      newMessage = this.replaceAll(newMessage, `{${key}}`, value);
+      newMessage = this.replaceAll(newMessage, `{${key}}`, value());
     }
 
     return newMessage;

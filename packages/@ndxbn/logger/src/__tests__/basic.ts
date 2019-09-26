@@ -25,7 +25,7 @@ test("Logger.addHandler() method", async done => {
 test("context that added with Logger.addContext() method, always pass to handler", async done => {
   const handler = new TestHandler();
   const logger = new Logger([handler]);
-  const fooContext = new Map([["foo", "FOO FOO"]]);
+  const fooContext = new Map([["foo", () => "FOO FOO"]]);
 
   logger.addContext(fooContext);
 
@@ -45,23 +45,23 @@ test("context that added with Logger.addContext() method, always pass to handler
 
 test("context priority", async done => {
   const handler = new TestHandler();
-  const fooBarContext = new Map([["foo", "FOO FOO"], ["bar", "BAR BAR"]]);
+  const fooBarContext = new Map([["foo", () => "FOO FOO"], ["bar", () => "BAR BAR"]]);
   const logger = new Logger([handler], fooBarContext);
 
-  const fooBazContext = new Map([["foo", "FOO BAR"], ["baz", "BAZ BAZ"]]);
+  const fooBazContext = new Map([["foo", () => "FOO BAR"], ["baz", () => "BAZ BAZ"]]);
   await logger.debug("debug foo", fooBazContext);
 
   // "foo" will be over rode
   const fooBarBazContextOverRode = new Map([
-    ["foo", "FOO BAR"],
-    ["bar", "BAR BAR"],
-    ["baz", "BAZ BAZ"]
+    ["foo", () => "FOO BAR"],
+    ["bar", () => "BAR BAR"],
+    ["baz", () => "BAZ BAZ"]
   ]);
   // "foo" will not be over rode
   const fooBarBazContextAdded = new Map([
-    ["foo", "FOO FOO"],
-    ["bar", "BAR BAR"],
-    ["baz", "BAZ BAZ"]
+    ["foo", () => "FOO FOO"],
+    ["bar", () => "BAR BAR"],
+    ["baz", () => "BAZ BAZ"]
   ]);
 
   // if same name context is exists in args, it general context will over-ride.

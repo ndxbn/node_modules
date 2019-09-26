@@ -73,7 +73,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "info",
         message: "foo",
-        context: new Map([["bar", "baz"]])
+        context: new Map([["bar", () => "baz"]])
       })
     ).toBeFalsy();
   });
