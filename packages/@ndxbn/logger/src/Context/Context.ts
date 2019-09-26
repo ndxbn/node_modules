@@ -12,12 +12,12 @@ export class Context extends Map<string, () => string> {
     }
 
     for (const key of another.keys()) {
-      // 片方にしか key が存在しない
+      //
       if (!this.has(key)) {
         return false;
       }
 
-      // Value が undefined になってるのは、そもそもおかしい。
+      // Map.get() returns Optional value, but if value is undefined, something is wrong.
       const selfValue = this.get(key);
       const targetValue = another.get(key);
       if (selfValue === undefined || targetValue === undefined) {
@@ -26,7 +26,7 @@ export class Context extends Map<string, () => string> {
         );
       }
 
-      // 値が違った
+      //
       if (selfValue() !== targetValue()) {
         return false;
       }
