@@ -18,7 +18,7 @@ import { Context } from "./Context";
  * to produce a stack trace, it MUST be in a key named "exception".
  *
  */
-export interface LoggerInterface {
+export interface ILogger {
   /**
    * System is unusable.
    */
@@ -76,7 +76,7 @@ export interface LoggerInterface {
   log(level: LogLevel, message: string, context?: Context): Promise<void>;
 }
 
-export class Logger extends LoggerBase implements LoggerInterface {
+export class Logger extends LoggerBase implements ILogger {
   public static create() {
     return new Logger([new ConsoleLogHandler()]);
   }
