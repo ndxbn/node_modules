@@ -1,4 +1,4 @@
-import Logger, { TestHandler } from "../";
+import Logger, { Context, TestHandler } from "../";
 
 test("Logger.create() method returns a logger instance that has console logger", async done => {
   jest.spyOn(console, "log");
@@ -25,7 +25,7 @@ test("Logger.addHandler() method", async done => {
 test("context that added with Logger.addContext() method, always pass to handler", async done => {
   const handler = new TestHandler();
   const logger = new Logger([handler]);
-  const fooContext = new Map([["foo", () => "FOO FOO"]]);
+  const fooContext = new Context([["foo", () => "FOO FOO"]]);
 
   logger.addContext(fooContext);
 
@@ -37,7 +37,7 @@ test("context that added with Logger.addContext() method, always pass to handler
   );
   // not empty context
   expect(
-    handler.hasRecord({ message: "debug foo", context: new Map() })
+    handler.hasRecord({ message: "debug foo", context: new Context() })
   ).not.toBe(true);
 
   done();
@@ -45,20 +45,20 @@ test("context that added with Logger.addContext() method, always pass to handler
 
 test("context priority", async done => {
   const handler = new TestHandler();
-  const fooBarContext = new Map([["foo", () => "FOO FOO"], ["bar", () => "BAR BAR"]]);
+  const fooBarContext = new Context([["foo", () => "FOO FOO"], ["bar", () => "BAR BAR"]]);
   const logger = new Logger([handler], fooBarContext);
 
-  const fooBazContext = new Map([["foo", () => "FOO BAR"], ["baz", () => "BAZ BAZ"]]);
+  const fooBazContext = new Context([["foo", () => "FOO BAR"], ["baz", () => "BAZ BAZ"]]);
   await logger.debug("debug foo", fooBazContext);
 
   // "foo" will be over rode
-  const fooBarBazContextOverRode = new Map([
+  const fooBarBazContextOverRode = new Context([
     ["foo", () => "FOO BAR"],
     ["bar", () => "BAR BAR"],
     ["baz", () => "BAZ BAZ"]
   ]);
   // "foo" will not be over rode
-  const fooBarBazContextAdded = new Map([
+  const fooBarBazContextAdded = new Context([
     ["foo", () => "FOO FOO"],
     ["bar", () => "BAR BAR"],
     ["baz", () => "BAZ BAZ"]
@@ -66,10 +66,7 @@ test("context priority", async done => {
 
   // if same name context is exists in args, it general context will over-ride.
   expect(
-    handler.hasRecord({
-      message: "debug foo",
-      context: fooBarBazContextOverRode
-    })
+    handler.hasRecord({ message: "debug foo", context: fooBarBazContextOverRode })
   ).toBe(true);
   expect(
     handler.hasRecord({ message: "debug foo", context: fooBarBazContextAdded })

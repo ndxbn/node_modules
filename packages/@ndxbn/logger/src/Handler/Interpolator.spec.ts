@@ -1,6 +1,7 @@
 import Interpolator from "./Interpolator";
+import { Context } from "../Context";
 
-const context = new Map<string, () => string>([["foo", () => "FOOBAR"]]);
+const context = new Context([["foo", () => "FOOBAR"]]);
 
 test("should replace placeholders with context values", () => {
   expect(Interpolator.interpolate("{foo}", context)).toBe("FOOBAR");
