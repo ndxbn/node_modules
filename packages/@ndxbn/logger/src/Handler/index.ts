@@ -1,6 +1,6 @@
 // handlers
 // interface
-export { HandlerInterface } from "./Handler";
+export { IHandler } from "./Handler";
 // concretes
 export { ConsoleLogHandler } from "./ConsoleLogHandler";
 export { TestHandler } from "./TestHandler";

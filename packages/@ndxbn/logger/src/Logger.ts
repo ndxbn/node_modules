@@ -2,7 +2,7 @@ import { LogLevel } from "./constants";
 import { Gateway } from "./Gateway";
 import { ConsoleLogHandler } from "./Handler";
 import { LoggerBase } from "./LoggerBase";
-import { HandlerInterface } from "./Handler";
+import { IHandler } from "./Handler";
 import { Context } from "./Context";
 
 /**
@@ -86,7 +86,7 @@ export class Logger extends LoggerBase implements ILogger {
 
   // factories
   public constructor(
-    handlers: HandlerInterface[] = [],
+    handlers: IHandler[] = [],
     generalContext: Context = new Context()
   ) {
     super();
@@ -106,7 +106,7 @@ export class Logger extends LoggerBase implements ILogger {
     await this.gateway.log(level, message, contextExtended);
   }
 
-  public addHandler(...handlers: HandlerInterface[]): this {
+  public addHandler(...handlers: IHandler[]): this {
     for (const handler of handlers) {
       this.gateway.handlers.push(handler);
     }

@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import { HandlerInterface } from "./Handler";
+import { IHandler } from "./Handler";
 
 type Record = {
   message: string;
@@ -11,7 +11,7 @@ type Record = {
  *
  * It records all records and gives you access to them for verification.
  */
-export class TestHandler implements HandlerInterface {
+export class TestHandler implements IHandler {
   public records: Record[] = [];
 
   public async log(
