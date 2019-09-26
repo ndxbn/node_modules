@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import { Formatter, RawFormatter } from "./Formatter";
+import { IFormatter, RawFormatter } from "./Formatter";
 import { IHandler } from "./Handler";
 import { Interpolator } from "./Interpolator";
 
@@ -7,7 +7,7 @@ import { Interpolator } from "./Interpolator";
  * output with `console.log()`
  */
 export class ConsoleLogHandler implements IHandler {
-  protected readonly formatter: Formatter = new RawFormatter();
+  protected readonly formatter: IFormatter = new RawFormatter();
 
   protected static get contextBase(): Context {
     return new Context([["datetime", () => new Date().toISOString()]]);
