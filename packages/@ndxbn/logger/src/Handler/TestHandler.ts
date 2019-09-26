@@ -1,5 +1,5 @@
 import { Context } from "../Context";
-import { HandlerInterface } from "./HandlerInterface";
+import { HandlerInterface } from "./Handler";
 
 type Record = {
   message: string;

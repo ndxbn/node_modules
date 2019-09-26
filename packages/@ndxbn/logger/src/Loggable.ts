@@ -1,4 +1,4 @@
-import { LoggerInterface } from "./LoggerInterface";
+import { LoggerInterface } from "./Logger";
 import { NullLogger } from "./NullLogger";
 
 type constructor<T extends {}> = {

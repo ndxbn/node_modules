@@ -1,6 +1,5 @@
 // Logger
 export { Logger } from "./Logger";
-export { LoggerInterface } from "./LoggerInterface";
 export { LoggerBase } from "./LoggerBase";
 export { LogLevel } from "./constants";
 export { Context } from "./Context";

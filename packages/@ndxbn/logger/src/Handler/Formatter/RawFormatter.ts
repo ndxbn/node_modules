@@ -1,4 +1,4 @@
-import { FormatterInterface } from "./FormatterInterface";
+import { FormatterInterface } from "./Formatter";
 
 /**
  * Return message as is formatter

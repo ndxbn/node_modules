@@ -1,13 +1,13 @@
 import { Context } from "../Context";
-import { FormatterInterface, RawFormatter } from "./Formatter";
-import { HandlerInterface } from "./HandlerInterface";
+import { Formatter, RawFormatter } from "./Formatter";
+import { HandlerInterface } from "./Handler";
 import { Interpolator } from "./Interpolator";
 
 /**
  * output with `console.log()`
  */
 export class ConsoleLogHandler implements HandlerInterface {
-  protected readonly formatter: FormatterInterface = new RawFormatter();
+  protected readonly formatter: Formatter = new RawFormatter();
 
   protected static get contextBase(): Context {
     return new Context([["datetime", () => new Date().toISOString()]]);

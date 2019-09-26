@@ -1,7 +1,7 @@
 import { LoggerBase } from "./LoggerBase";
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
-import { LoggerInterface } from "./LoggerInterface";
+import { LoggerInterface } from "./Logger";
 
 type Record = {
   level: LogLevel;

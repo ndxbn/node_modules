@@ -1,6 +1,6 @@
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
-import { LoggerInterface } from "./LoggerInterface";
+import { LoggerInterface } from "./Logger";
 
 /**
  * This is a simple Logger implementation that other Loggers can inherit from.

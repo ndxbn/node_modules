@@ -1,4 +1,4 @@
-export { FormatterInterface } from "./FormatterInterface";
+export { FormatterInterface } from "./Formatter";
 
 // concrete formatters
 export { RawFormatter } from "./RawFormatter";
