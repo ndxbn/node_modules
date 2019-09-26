@@ -9,7 +9,7 @@ export { Context } from "./Context";
 export { NullLogger } from "./NullLogger";
 
 // LoggerAware
-// export * from "./LoggerAwareTrait";
+export * from "./Loggable";
 
 // Handler and Formatter
 export * from "./Handler";
