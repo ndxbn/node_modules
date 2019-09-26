@@ -1,21 +1,21 @@
 import { Context } from "../Context";
-import { FormatterInterface, RawFormatter } from "./Formatter";
-import HandlerInterface from "./HandlerInterface";
-import Interpolator from "./Interpolator";
+import { IFormatter, RawFormatter } from "./Formatter";
+import { IHandler } from "./Handler";
+import { Interpolator } from "./Interpolator";
 
 /**
  * output with `console.log()`
  */
-export default class ConsoleLogHandler implements HandlerInterface {
-  protected readonly formatter: FormatterInterface = new RawFormatter();
+export class ConsoleLogHandler implements IHandler {
+  protected readonly formatter: IFormatter = new RawFormatter();
 
   protected static get contextBase(): Context {
-    return new Map([["datetime", new Date().toISOString()]]);
+    return new Context([["datetime", () => new Date().toISOString()]]);
   }
 
   public async log(message: string, context: Context): Promise<void> {
     // merge
-    const contextExtended: Context = new Map([
+    const contextExtended: Context = new Context([
       ...ConsoleLogHandler.contextBase,
       ...context
     ]);

@@ -1,4 +1,4 @@
-import LoggerBase from "./LoggerBase";
+import { LoggerBase } from "./LoggerBase";
 
 /**
  * This Logger can be used to avoid conditional log calls.
@@ -8,7 +8,7 @@ import LoggerBase from "./LoggerBase";
  * is a good way to avoid littering your code with `if ($this->logger) { }`
  * blocks.
  */
-export default class NullLogger extends LoggerBase {
+export class NullLogger extends LoggerBase {
   /**
    * @inheritDoc
    */

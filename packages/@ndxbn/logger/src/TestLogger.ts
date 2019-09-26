@@ -1,8 +1,7 @@
-import * as assert from "assert";
-import LoggerBase from "./LoggerBase";
+import { LoggerBase } from "./LoggerBase";
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
-import LoggerInterface from "./LoggerInterface";
+import { ILogger } from "./Logger";
 
 type Record = {
   level: LogLevel;
@@ -14,13 +13,13 @@ type Record = {
  *
  * It records all records and gives you access to them for verification.
  */
-export default class TestLogger extends LoggerBase implements LoggerInterface {
+export class TestLogger extends LoggerBase implements ILogger {
   public records: Record[] = [];
 
   public async log(
     level: LogLevel,
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     this.records.push({ level, message, context });
   }
@@ -34,17 +33,12 @@ export default class TestLogger extends LoggerBase implements LoggerInterface {
   }
 
   public hasRecord(record: Record): boolean {
-    return this.hasRecordThatPasses(haystack => {
-      if (haystack.message === record.message) {
-        try {
-          assert.deepStrictEqual(haystack.context, record.context);
-          return true;
-        } catch (e) {
-          return false;
-        }
-      }
-      return false;
-    }, record.level);
+    return this.hasRecordThatPasses(
+      haystack =>
+        haystack.message === record.message &&
+        haystack.context.equals(record.context),
+      record.level
+    );
   }
 
   public hasRecordThatContains(message: string, level: LogLevel): boolean {

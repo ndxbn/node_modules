@@ -1,6 +1,6 @@
 import { Context } from "../Context";
 
-export default class Interpolator {
+export class Interpolator {
   /**
    * Placeholder names MUST be delimited with a single opening brace { and a single closing brace }.
    * There MUST NOT be any whitespace between the delimiters and the placeholder name.
@@ -14,7 +14,7 @@ export default class Interpolator {
     let newMessage: string = message;
 
     for (const [key, value] of context) {
-      newMessage = this.replaceAll(newMessage, `{${key}}`, value);
+      newMessage = this.replaceAll(newMessage, `{${key}}`, value());
     }
 
     return newMessage;

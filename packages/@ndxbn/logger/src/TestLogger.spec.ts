@@ -1,4 +1,5 @@
-import TestLogger from "./TestLogger";
+import { TestLogger } from "./TestLogger";
+import { Context } from "./Context";
 
 describe("hasRecords method", () => {
   test("should return true when have records", async () => {
@@ -38,7 +39,11 @@ describe("hasRecord method", () => {
     await logger.info("foo");
 
     expect(
-      logger.hasRecord({ level: "info", message: "foo", context: new Map() })
+      logger.hasRecord({
+        level: "info",
+        message: "foo",
+        context: new Context()
+      })
     ).toBeTruthy();
   });
 
@@ -46,7 +51,11 @@ describe("hasRecord method", () => {
     const logger = new TestLogger();
 
     expect(
-      logger.hasRecord({ level: "notice", message: "foo", context: new Map() })
+      logger.hasRecord({
+        level: "notice",
+        message: "foo",
+        context: new Context()
+      })
     ).toBeFalsy();
   });
   test("should return false when does not have records: loglevel", async () => {
@@ -54,7 +63,11 @@ describe("hasRecord method", () => {
     await logger.info("foo");
 
     expect(
-      logger.hasRecord({ level: "warning", message: "foo", context: new Map() })
+      logger.hasRecord({
+        level: "warning",
+        message: "foo",
+        context: new Context()
+      })
     ).toBeFalsy();
   });
   test("should return false when does not have records: message", async () => {
@@ -62,7 +75,11 @@ describe("hasRecord method", () => {
     await logger.info("foo");
 
     expect(
-      logger.hasRecord({ level: "info", message: "bar", context: new Map() })
+      logger.hasRecord({
+        level: "info",
+        message: "bar",
+        context: new Context()
+      })
     ).toBeFalsy();
   });
   test("should return false when does not have records: context", async () => {
@@ -73,7 +90,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "info",
         message: "foo",
-        context: new Map([["bar", "baz"]])
+        context: new Context([["bar", () => "baz"]])
       })
     ).toBeFalsy();
   });

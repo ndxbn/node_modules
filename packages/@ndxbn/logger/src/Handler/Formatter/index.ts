@@ -1,4 +1,4 @@
-export { default as FormatterInterface } from "./FormatterInterface";
+export { IFormatter } from "./Formatter";
 
 // concrete formatters
-export { default as RawFormatter } from "./RawFormatter";
+export { RawFormatter } from "./RawFormatter";

@@ -1,6 +1,6 @@
 import { LogLevel } from "./constants";
 import { Context } from "./Context";
-import LoggerInterface from "./LoggerInterface";
+import { ILogger } from "./Logger";
 
 /**
  * This is a simple Logger implementation that other Loggers can inherit from.
@@ -9,7 +9,7 @@ import LoggerInterface from "./LoggerInterface";
  * reduce boilerplate code that a simple Logger that does the same thing with
  * messages regardless of the error level has to implement.
  */
-export default abstract class LoggerBase implements LoggerInterface {
+export abstract class LoggerBase implements ILogger {
   /**
    * @inheritDoc
    */
@@ -24,7 +24,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async emergency(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("emergency", message, context);
   }
@@ -34,7 +34,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async alert(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("alert", message, context);
   }
@@ -44,7 +44,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async critical(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("critical", message, context);
   }
@@ -54,7 +54,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async error(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("error", message, context);
   }
@@ -64,7 +64,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async warning(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("warning", message, context);
   }
@@ -74,7 +74,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async notice(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("notice", message, context);
   }
@@ -84,7 +84,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async info(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("info", message, context);
   }
@@ -94,7 +94,7 @@ export default abstract class LoggerBase implements LoggerInterface {
    */
   public async debug(
     message: string,
-    context: Context = new Map()
+    context: Context = new Context()
   ): Promise<void> {
     return await this.log("debug", message, context);
   }

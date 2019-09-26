@@ -1,9 +1,9 @@
 import { LogLevel } from "./constants";
-import { HandlerInterface } from "./Handler";
+import { IHandler } from "./Handler";
 import { Context } from "./Context";
 
-export default class Gateway {
-  public readonly handlers: HandlerInterface[] = [];
+export class Gateway {
+  public readonly handlers: IHandler[] = [];
   public readonly handlingLoLevels: Set<LogLevel>;
 
   constructor() {

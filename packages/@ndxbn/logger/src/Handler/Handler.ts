@@ -1,5 +1,5 @@
 import { Context } from "../Context";
 
-export default interface HandlerInterface {
+export interface IHandler {
   log(message: string, context?: Context): Promise<void>;
 }
