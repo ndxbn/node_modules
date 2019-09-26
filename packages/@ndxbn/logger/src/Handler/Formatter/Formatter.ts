@@ -1,3 +1,3 @@
-export interface FormatterInterface {
+export interface IFormatter {
   format(message: string): string;
 }
