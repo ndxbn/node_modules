@@ -18,7 +18,7 @@ export interface LoggerInterface {
   /**
    * System is unusable.
    */
-  emergency(message: string, context: Context): Promise<void>;
+  emergency(message: string, context?: Context): Promise<void>;
 
   /**
    * Action must be taken immediately.
@@ -26,20 +26,20 @@ export interface LoggerInterface {
    * Example: Entire website down, database unavailable, etc. This should
    * trigger the SMS alerts and wake you up.
    */
-  alert(message: string, context: Context): Promise<void>;
+  alert(message: string, context?: Context): Promise<void>;
 
   /**
    * Critical conditions.
    *
    * Example: Application component unavailable, unexpected exception.
    */
-  critical(message: string, context: Context): Promise<void>;
+  critical(message: string, context?: Context): Promise<void>;
 
   /**
    * Runtime errors that do not require immediate action but should typically
    * be logged and monitored.
    */
-  error(message: string, context: Context): Promise<void>;
+  error(message: string, context?: Context): Promise<void>;
 
   /**
    * Exceptional occurrences that are not errors.
@@ -47,27 +47,27 @@ export interface LoggerInterface {
    * Example: Use of deprecated APIs, poor use of an API, undesirable things
    * that are not necessarily wrong.
    */
-  warning(message: string, context: Context): Promise<void>;
+  warning(message: string, context?: Context): Promise<void>;
 
   /**
    * Normal but significant events.
    */
-  notice(message: string, context: Context): Promise<void>;
+  notice(message: string, context?: Context): Promise<void>;
 
   /**
    * Interesting events.
    *
    * Example: User logs in, SQL logs.
    */
-  info(message: string, context: Context): Promise<void>;
+  info(message: string, context?: Context): Promise<void>;
 
   /**
    * Detailed debug information.
    */
-  debug(message: string, context: Context): Promise<void>;
+  debug(message: string, context?: Context): Promise<void>;
 
   /**
    * Logs with an arbitrary level.
    */
-  log(level: LogLevel, message: string, context: Context): Promise<void>;
+  log(level: LogLevel, message: string, context?: Context): Promise<void>;
 }
