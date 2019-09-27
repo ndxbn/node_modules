@@ -10,7 +10,6 @@ class Base {
 
 class Target extends Loggable(Base) {
   public double(name: string): string {
-    // 投げっぱなしにする
     this.logger.debug(name);
 
     return super.double(name);
