@@ -14,7 +14,7 @@
   "devDependencies": {
     "@ndxbn/preset-typescript": "^0.0.11",
     "@types/mustache": "0.8.32",
-    "@types/node": "10.14.20",
+    "@types/node": "10.14.21",
     "typescript": "3.6.3"
   },
   "keywords": [],
