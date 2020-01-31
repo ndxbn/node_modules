@@ -35,7 +35,7 @@
     "@ndxbn/preset-jest": "file:packages/@ndxbn/preset-jest",
     "@ndxbn/preset-typescript": "file:packages/@ndxbn/preset-typescript",
     "@types/config": "0.0.36",
-    "@types/jest": "24.9.1",
+    "@types/jest": "25.1.1",
     "config": "3.2.5",
     "husky": "4.2.1",
     "jest": "24.9.0",
