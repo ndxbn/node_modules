@@ -10,12 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "mustache": "^3.0.1"
+    "mustache": "^4.0.0"
   },
   "devDependencies": {
     "@ndxbn/preset-jest": "0.0.2",
     "@ndxbn/preset-typescript": "0.0.5",
-    "@types/mustache": "0.8.32",
+    "@types/mustache": "4.0.0",
     "@types/node": "10.17.14",
     "typescript": "3.7.5"
   },
