@@ -20,7 +20,7 @@
   },
   "gitHead": "f0e9b05984093a6025d40517d2c6872e34899b95",
   "peerDependencies": {
-    "ts-jest": "25.3.1"
+    "ts-jest": "25.4.0"
   },
   "dependencies": {
     "ts-jest": "^25.0.0"
