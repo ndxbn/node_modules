@@ -16,7 +16,7 @@
     "@ndxbn/preset-jest": "0.0.2",
     "@ndxbn/preset-typescript": "0.0.5",
     "@types/mustache": "4.0.1",
-    "@types/node": "10.17.20",
+    "@types/node": "10.17.21",
     "typescript": "3.8.3"
   },
   "keywords": [],
