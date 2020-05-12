@@ -21,7 +21,7 @@
     "@types/node": "12.12.38",
     "jest": "25.1.0",
     "ts-jest": "25.5.1",
-    "typescript": "3.8.3"
+    "typescript": "3.9.2"
   },
   "keywords": [],
   "license": "MIT",
