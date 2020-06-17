@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@ndxbn'
+          scope: "@ndxbn"
       - run: npm ci
       - run: npm run release
         env:

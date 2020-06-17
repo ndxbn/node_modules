@@ -3,4 +3,4 @@ services:
   hello:
     build: ./servers/hello
     ports:
-    - 8000:8000
+      - 8000:8000
