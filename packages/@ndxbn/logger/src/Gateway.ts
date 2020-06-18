@@ -20,7 +20,7 @@ export class Gateway {
     }
 
     return Promise.all(
-      this.handlers.map(handler => handler.log(message, context))
+      this.handlers.map((handler) => handler.log(message, context))
     );
   }
 
@@ -37,7 +37,7 @@ export class Gateway {
       ["warning", 300],
       ["notice", 250],
       ["info", 200],
-      ["debug", 100]
+      ["debug", 100],
     ]);
   }
 }

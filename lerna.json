@@ -1,5 +1,7 @@
 {
-  "packages": ["packages/@ndxbn/*", "packages/global/*", "servers/*"],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "independent",
   "command": {
     "publish": {
       "allowBranch": "master",
@@ -13,6 +15,5 @@
     "**/*.spec.ts",
     "**/*.test.ts",
     "**/*.md"
-  ],
-  "version": "independent"
+  ]
 }

@@ -25,7 +25,7 @@ export class TestLogger extends LoggerBase implements ILogger {
   }
 
   public hasRecords(level: LogLevel): boolean {
-    return this.records.find(record => record.level === level) != undefined;
+    return this.records.find((record) => record.level === level) != undefined;
   }
 
   public reset(): void {
@@ -34,7 +34,7 @@ export class TestLogger extends LoggerBase implements ILogger {
 
   public hasRecord(record: Record): boolean {
     return this.hasRecordThatPasses(
-      haystack =>
+      (haystack) =>
         haystack.message === record.message &&
         haystack.context.equals(record.context),
       record.level
@@ -43,14 +43,14 @@ export class TestLogger extends LoggerBase implements ILogger {
 
   public hasRecordThatContains(message: string, level: LogLevel): boolean {
     return this.hasRecordThatPasses(
-      record => record.message.includes(message),
+      (record) => record.message.includes(message),
       level
     );
   }
 
   public hasRecordThatMatches(regex: RegExp, level: LogLevel): boolean {
     return this.hasRecordThatPasses(
-      record => regex.test(record.message),
+      (record) => regex.test(record.message),
       level
     );
   }

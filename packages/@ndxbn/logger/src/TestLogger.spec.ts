@@ -42,7 +42,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "info",
         message: "foo",
-        context: new Context()
+        context: new Context(),
       })
     ).toBeTruthy();
   });
@@ -54,7 +54,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "notice",
         message: "foo",
-        context: new Context()
+        context: new Context(),
       })
     ).toBeFalsy();
   });
@@ -66,7 +66,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "warning",
         message: "foo",
-        context: new Context()
+        context: new Context(),
       })
     ).toBeFalsy();
   });
@@ -78,7 +78,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "info",
         message: "bar",
-        context: new Context()
+        context: new Context(),
       })
     ).toBeFalsy();
   });
@@ -90,7 +90,7 @@ describe("hasRecord method", () => {
       logger.hasRecord({
         level: "info",
         message: "foo",
-        context: new Context([["bar", () => "baz"]])
+        context: new Context([["bar", () => "baz"]]),
       })
     ).toBeFalsy();
   });

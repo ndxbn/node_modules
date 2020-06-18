@@ -31,18 +31,20 @@ export class TestHandler implements IHandler {
 
   public hasRecord(record: Record): boolean {
     return this.hasRecordThatPasses(
-      haystack =>
+      (haystack) =>
         haystack.message === record.message &&
         haystack.context.equals(record.context)
     );
   }
 
   public hasRecordThatContains(message: string): boolean {
-    return this.hasRecordThatPasses(record => record.message.includes(message));
+    return this.hasRecordThatPasses((record) =>
+      record.message.includes(message)
+    );
   }
 
   public hasRecordThatMatches(regex: RegExp): boolean {
-    return this.hasRecordThatPasses(record => regex.test(record.message));
+    return this.hasRecordThatPasses((record) => regex.test(record.message));
   }
 
   public hasRecordThatPasses(predicate: (record: Record) => boolean): boolean {

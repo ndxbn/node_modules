@@ -92,7 +92,7 @@ export function task(cwd: string) {
         "@types/node",
         "jest",
         "ts-jest",
-        "typescript"
+        "typescript",
       ].join(" ")
   );
 

@@ -36,7 +36,7 @@ test("loggable trait basic usage", () => {
     (target.logger as TestLogger).hasRecord({
       message: "foo",
       level: "debug",
-      context: new Context()
+      context: new Context(),
     })
   ).toBe(true);
 });

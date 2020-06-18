@@ -20,6 +20,7 @@ coverage/
 
 # Node.js
 package-lock.json
+yarn.lock
 
 # Vagrant
 Vagrantfile
