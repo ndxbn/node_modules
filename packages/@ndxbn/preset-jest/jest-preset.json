@@ -2,7 +2,6 @@
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
-  "roots": ["<rootDir>/src/"],
   "collectCoverage": true,
   "collectCoverageFrom": ["**/*"],
   "testEnvironment": "node"
