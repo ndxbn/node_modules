@@ -17,7 +17,7 @@ export class ConsoleLogHandler implements IHandler {
     // merge
     const contextExtended: Context = new Context([
       ...ConsoleLogHandler.contextBase,
-      ...context
+      ...context,
     ]);
 
     const logMessage = Interpolator.interpolate(message, contextExtended);
