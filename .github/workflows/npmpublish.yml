@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm cit
+      - run: yarn --frozen-lockfile
 
   publish-npm:
     needs: build
@@ -23,8 +23,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm run release
+      - run: yarn --frozen-lockfile
+      - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
   publish-gpr:
@@ -37,7 +37,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@ndxbn"
-      - run: npm ci
-      - run: npm run release
+      - run: yarn --frozen-lockfile
+      - run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
