@@ -12,7 +12,7 @@
   "devDependencies": {
     "@ndxbn/preset-jest": "^0.2.3",
     "@ndxbn/preset-typescript": "^0.0.11",
-    "@types/jest": "26.0.6",
+    "@types/jest": "26.0.7",
     "@types/node": "12.12.52",
     "jest": "26.1.0",
     "ts-jest": "26.1.3",
