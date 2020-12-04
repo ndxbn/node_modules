@@ -14,7 +14,6 @@
     "url": "https://github.com/ndxbn/ndxbn/issues"
   },
   "homepage": "https://github.com/ndxbn/ndxbn/packages/preset-typescript#readme",
-  "private": false,
   "publishConfig": {
     "access": "public"
   },
