@@ -9,22 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: yarn --frozen-lockfile
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.1
+      - run: npm ci
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.1
         with:
-          node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: yarn --frozen-lockfile
-      - run: yarn release
+      - run: npm ci
+      - run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
   publish-gpr:
@@ -32,12 +31,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.1
         with:
-          node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@ndxbn"
-      - run: yarn --frozen-lockfile
-      - run: yarn release
+      - run: npm ci
+      - run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
