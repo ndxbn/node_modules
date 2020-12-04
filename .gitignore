@@ -11,6 +11,3 @@ node_modules/
 package-lock.json
 # but, these are used to build docker image
 !servers/*/package-lock.json
-
-# Vagrant
-.vagrant/
