@@ -1,10 +1,6 @@
 {
   "version": "independent",
-  "packages": [
-    "packages/@ndxbn/*",
-    "packages/global/*",
-    "servers/*"
-  ],
+  "packages": ["packages/@ndxbn/*", "packages/global/*", "servers/*"],
   "command": {
     "publish": {
       "allowBranch": "master",
