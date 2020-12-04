@@ -1,37 +1,4 @@
-# editor settings
-.idea/
-.vscode/
-
-# dot files
-.*ignore
-.*rc
-.editorconfig
-.tsbuildinfo
-.gitkeep
-
-# repository commons
-LICENSE
-CHANGELOG.md
-*.log
-
-# project directory
-lib/
-coverage/
-
 # Node.js
 package-lock.json
-yarn.lock
 
-# Vagrant
-Vagrantfile
-.vagrant/
-
-# Docker
-Dockerfile
-
-# extension
-## PlantUML
-*.puml
-
-# template file
-*.*.mustache
+CHANGELOG.md
