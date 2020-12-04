@@ -45,8 +45,7 @@
     "ts-jest": "26.4.4",
     "ts-node": "9.1.0",
     "typescript": "4.1.2",
-    "winston": "3.3.3",
-    "yarn": "1.22.10"
+    "winston": "3.3.3"
   },
   "jest": {
     "preset": "@ndxbn/preset-jest",
@@ -59,10 +58,5 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-push": "yarn lint"
     }
-  },
-  "workspaces": [
-    "packages/@ndxbn/*",
-    "packages/global.*",
-    "servers/*"
-  ]
+  }
 }

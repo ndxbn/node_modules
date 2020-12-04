@@ -3,13 +3,7 @@ logs
 *.log
 npm-debug.log*
 .tsbuildinfo
-.yarn
-.pnp.js
 ##
 lib/
 coverage/
 node_modules/
-# I use yarn
-package-lock.json
-# but, these are used to build docker image
-!servers/*/package-lock.json
