@@ -24,9 +24,9 @@
     "build": "lerna run prepare",
     "release": "lerna publish --yes --ignore-scripts",
     "test": "jest",
-    "lint": "prettier -l \"**/*\"",
+    "lint": "prettier -u -l \"**/*\"",
     "fmt": "run-s format",
-    "format": "prettier --write \"**/**\""
+    "format": "prettier -u --write \"**/**\""
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
