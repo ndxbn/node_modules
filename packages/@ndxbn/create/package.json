@@ -31,7 +31,6 @@
   },
   "author": "ndxbn <sitri.ndxbn@gmail.com> (https://www.ndxbn.tokyo)",
   "contributors": [],
-  "private": false,
   "publishConfig": {
     "access": "public"
   },

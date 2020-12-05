@@ -13,7 +13,7 @@ export abstract class LoggerBase implements ILogger {
   /**
    * @inheritDoc
    */
-  abstract async log(
+  abstract log(
     level: LogLevel,
     message: string,
     context: Context
