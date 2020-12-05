@@ -1,9 +1,7 @@
 // entry point as server process
-import express from "express";
+import { HttpApplication } from "./";
 
-const app = express();
-app.get("/", (_, res) => {
-  res.json("Hello! Here is ndxbn Server!");
-});
+const app = new HttpApplication();
+app.port = 8000;
 
-app.listen(8000);
+app.start();
