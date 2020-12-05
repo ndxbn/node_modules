@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](http://github.com/ndxbn/ndxbn/packages/logger/compare/@ndxbn/logger@1.0.8...@ndxbn/logger@2.0.0) (2020-12-05)
+
+
+### Bug Fixes
+
+* error ([83c3388](http://github.com/ndxbn/ndxbn/packages/logger/commit/83c3388149b09229752235c8eb97e41371120cec))
+
+
+### Features
+
+* **logger:** change context value type ([5a085a1](http://github.com/ndxbn/ndxbn/packages/logger/commit/5a085a1b962703c5155275d74faa98e1b1c5303a))
+* **logger:** fix Loggable trait ([caaf373](http://github.com/ndxbn/ndxbn/packages/logger/commit/caaf373d0f8b37cf9b3a5afcd07141968b1db37c))
+* **logger:** refactoring Context type ([e5828ba](http://github.com/ndxbn/ndxbn/packages/logger/commit/e5828babaa77934dd84aeea721c9ccb3e717229d))
+
+
+### BREAKING CHANGES
+
+* **logger:** If you pass pure Map object as context, it goes broken.
+* **logger:** change context value type.
+
+
+
+
+
 ## [1.0.8](http://github.com/ndxbn/ndxbn/packages/logger/compare/@ndxbn/logger@1.0.7...@ndxbn/logger@1.0.8) (2019-07-29)
 
 **Note:** Version bump only for package @ndxbn/logger
