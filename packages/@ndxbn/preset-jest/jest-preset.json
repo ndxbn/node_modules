@@ -3,6 +3,6 @@
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
   "collectCoverage": true,
-  "collectCoverageFrom": ["**/*"],
+  "collectCoverageFrom": ["<rootDir>/src/**/*.{ts,tsx}"],
   "testEnvironment": "node"
 }
