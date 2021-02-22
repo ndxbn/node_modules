@@ -14,8 +14,8 @@
     "express": "4.17.1"
   },
   "devDependencies": {
-    "@ndxbn/preset-jest": "^0.2.4",
-    "@ndxbn/preset-typescript": "^0.0.12",
+    "@ndxbn/preset-jest": "0.2.4",
+    "@ndxbn/preset-typescript": "0.0.12",
     "@types/express": "4.17.11",
     "@types/jest": "26.0.20",
     "@types/node": "12.20.4",
