@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.2.3...@ndxbn/preset-jest@0.2.4) (2020-12-05)
+
+
+### Bug Fixes
+
+* **preset-jest:** remove root in preset file ([1a67535](https://github.com/ndxbn/ndxbn/commit/1a67535f44b6235d099f8e398626e6d5b1c8eba3))
+
+
+
+
+
 ## [0.2.3](https://github.com/ndxbn/ndxbn/compare/@ndxbn/preset-jest@0.2.2...@ndxbn/preset-jest@0.2.3) (2019-07-29)
 
 **Note:** Version bump only for package @ndxbn/preset-jest

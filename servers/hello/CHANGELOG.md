@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](http://github.com/ndxbn/ndxbn/packages/hello/compare/@ndxbn/hello@0.0.6...@ndxbn/hello@0.0.7) (2020-12-05)
+
+**Note:** Version bump only for package @ndxbn/hello
+
+
+
+
+
 ## [0.0.6](http://github.com/ndxbn/ndxbn/packages/hello/compare/@ndxbn/hello@0.0.5...@ndxbn/hello@0.0.6) (2019-07-29)
 
 **Note:** Version bump only for package @ndxbn/hello
