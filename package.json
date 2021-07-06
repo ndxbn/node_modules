@@ -34,7 +34,7 @@
     "@commitlint/config-lerna-scopes": "12.1.4",
     "@ndxbn/preset-jest": "file:packages/@ndxbn/preset-jest",
     "@ndxbn/preset-typescript": "file:packages/@ndxbn/preset-typescript",
-    "@types/config": "0.0.38",
+    "@types/config": "0.0.39",
     "@types/jest": "26.0.23",
     "config": "3.3.6",
     "husky": "6.0.0",
